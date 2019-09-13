@@ -28,6 +28,18 @@ const tokensMetadata = {
     name: 'Ethereum',
     icon: EthIcon,
   },
+  WBTC: {
+    name: 'Wrapped Bitcoin',
+    icon: WbtcIcon,
+  },
+  USDC: {
+    name: 'USD Coin',
+    icon: UsdcIcon,
+  },
+  OMG: {
+    name: 'OmiseGO',
+    icon: OmgIcon,
+  },
   REP: {
     name: 'Augur',
     icon: RepIcon,
@@ -36,38 +48,16 @@ const tokensMetadata = {
     name: '0x',
     icon: ZrxIcon,
   },
-  BAT: {
-    name: 'Basic Attention Token',
-    icon: BatIcon,
-  },
   DGD: {
-    name: 'DigixDAO',
+    name: 'Digix Gold Token',
     icon: DgdIcon,
-  },
-  OMG: {
-    name: 'Omisego',
-    icon: OmgIcon,
-  },
-  MKR: {
-    name: 'Maker',
-    icon: MkrIcon,
-  },
-  USDC: {
-    name: 'USD Coin',
-    icon: UsdcIcon,
-  },
-  WBTC: {
-    name: 'Wrapped Bitcoin',
-    icon: WbtcIcon,
-  },
-  GNT: {
-    name: 'Golem',
   },
 }
 
 const Token = ({name, icon: Icon}) => (
-  <div>
-    {Icon ? <Icon /> : <EmptyIcon/>} {name}
+  <div style={{display: "flex", alignItems: "center"}}>
+    {Icon ? <Icon width="22" height="22" /> : <EmptyIcon width="22" height="22"/>}
+    <span style={{fontSize: "15px", lineHeight: "22px", marginLeft: "13px"}}>{name}</span>
   </div>
 )
 
@@ -136,7 +126,9 @@ const IndexPage = () => (
     </div>
     <div className="section">
       <h3>Supported Tokens</h3>
+      <div style={{display: "flex", justifyContent: "space-around", margin: "0 auto", maxWidth: "978px" }}>
       {Object.values(tokensMetadata).map(({name, icon}) => <Token name={name} icon={icon} />)}
+      </div>
     </div>
     <div className="section">
       <h3>What's the Story</h3>
