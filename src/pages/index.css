@@ -1,24 +1,57 @@
 
 #hero {
-  font-size: 2rem;
+  font-size: 36px;
+  margin: 97px;
 }
+
 #cards {
-  width: 1000px;
-  height: 369px;
+  width: 1050px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
+
 .card {
-  background-color: gray;
-  border-radius: 5px;
+  background-color: #EEEEEE;
+  border-radius: 15px;
   width: 300px;
+  height: 368px;
+
+  position: relative;
 }
+
+.card .title {
+  font-size: 29px;
+  margin-top: 55px;
+}
+
+.card .description {
+  font-size: 17px;
+  line-height: 25px;
+  margin-top: 27px;
+  margin-right: 23px;
+  margin-left: 23px;
+}
+
+.card .buttonContainer {
+  position: absolute;
+  bottom: 44px;
+  width: 100%;
+}
+
 .card .button {
-  padding: 5px;
-  border: 2px solid black;
-  border-radius: 4px;
+  padding-right: 22px;
+  padding-left: 22px;
+  border: 1px solid black;
+  border-radius: 6px;
   display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  box-sizing: border-box;
+  height: 39px;
+  line-height: 34px;
 }
+
 h3 {
   font-size: 29px;
   font-weight: normal;

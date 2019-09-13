@@ -113,6 +113,16 @@ const Questions = () => {
   })
 }
 
+const Card = ({title, content, buttonText}) => (
+  <div className="card">
+    <div className="title">{title}</div>
+    <div className="description">{content}</div>
+    <div className="buttonContainer">
+      <div className="button">{buttonText}</div>
+    </div>
+  </div>
+)
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Oasis" />
@@ -120,26 +130,9 @@ const IndexPage = () => (
       Trade, borrow and save using Dai.
     </div>
     <div id="cards">
-      <div className="card">
-        <div className="name">Trade</div>
-        <div className="description">Wallet to wallet token trading. Decentralized leverage. The most secure way to
-          trade.
-        </div>
-        <div className="button">Start Trading</div>
-      </div>
-      <div className="card">
-        <div className="name">Borrow</div>
-        <div className="description">Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
-        </div>
-        <div className="button">Borrow Dai</div>
-      </div>
-      <div className="card">
-        <div className="name">Save</div>
-        <div className="description">Save by holding Dai. Track your interest over time. Automatic, non-custodial
-          savings.
-        </div>
-        <div className="button">Save Dai</div>
-      </div>
+      <Card title="Trade" content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade." buttonText="Start Trading"/>
+      <Card title="Borrow" content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD." buttonText="Borrow Dai"/>
+      <Card title="Save" content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings." buttonText="Save Dai"/>
     </div>
     <div className="section">
       <h3>Supported Tokens</h3>
