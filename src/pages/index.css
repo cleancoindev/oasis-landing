@@ -1,0 +1,41 @@
+body {
+  padding: 0 40px;
+  font-family: 'FT Switch';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+}
+#header {
+  text-align: left;
+}
+#header nav {
+  float: right;
+}
+#header nav li {
+  display: inline;
+}
+#hero {
+  font-size: 2rem;
+}
+#cards {
+  width: 1000px;
+  height: 369px;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  background-color: gray;
+  border-radius: 5px;
+  width: 300px;
+}
+.card .button {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
+  display: inline-block;
+}
+h3 {
+  font-size: 29px;
+  font-weight: normal;
+}
+/*# sourceMappingURL=style.css.map */
