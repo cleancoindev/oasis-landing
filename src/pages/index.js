@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -18,6 +18,10 @@ import RepIcon from '../images/icons/rep.svg'
 import UsdcIcon from '../images/icons/usdc.svg'
 import WbtcIcon from '../images/icons/wbtc.svg'
 import EmptyIcon from '../images/icons/empty.svg'
+
+import Cross from "../images/cross.svg"
+import Minus from "../images/minus.svg"
+
 
 const tokensMetadata = {
   ETH: {
@@ -67,6 +71,48 @@ const Token = ({name, icon: Icon}) => (
   </div>
 )
 
+const Questions = () => {
+  const [selectedIndex, setSelectedIndex] = useState(null)
+
+  const questions = [{
+    q: "What is Oasis?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "How secure is Oasis?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "Do I need an account to use Oasis?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "How do I borrow Dai?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "How do I trade my tokens?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "Does Oasis charge fees?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },{
+    q: "How can I exchange fiat to Dai?",
+    a: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis."
+  },]
+
+  return questions.map(({q, a}, index) => {
+    const isSelected = index === selectedIndex
+    return (
+      <>
+        <div>{q}</div>
+        {isSelected ? (
+          <div onClick={() => setSelectedIndex(null)}><Minus /></div>
+        ): (
+          <div onClick={() => setSelectedIndex(index)}><Cross /></div>
+        )}
+        {isSelected ? <div>{a}</div> : null}
+      </>
+    )
+  })
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Oasis" />
@@ -109,6 +155,7 @@ const IndexPage = () => (
     </div>
     <div className="section">
       <h3>General Questions</h3>
+      <Questions/>
     </div>
 
   </Layout>
