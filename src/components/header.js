@@ -1,14 +1,13 @@
 import React from "react"
+import './header.css'
 
 const Header = () => (
   <header>
     <span id="title">Oasis</span>
     <nav>
-      <ol>
-        <li><a href="#">Trade</a></li>
-        <li><a href="#">Borrow</a></li>
-        <li><a href="#">Save</a></li>
-      </ol>
+      <a href="#">Trade</a>
+      <a href="#">Borrow</a>
+      <a href="#">Save</a>
     </nav>
   </header>
 )

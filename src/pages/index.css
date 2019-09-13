@@ -1,19 +1,4 @@
-body {
-  padding: 0 40px;
-  font-family: 'FT Switch';
-  font-weight: normal;
-  font-style: normal;
-  text-align: center;
-}
-#header {
-  text-align: left;
-}
-#header nav {
-  float: right;
-}
-#header nav li {
-  display: inline;
-}
+
 #hero {
   font-size: 2rem;
 }

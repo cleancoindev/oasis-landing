@@ -1,0 +1,23 @@
+header {
+  text-align: left;
+}
+
+header nav {
+  float: right;
+  width: 268px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav a {
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+}
+
+#title {
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}

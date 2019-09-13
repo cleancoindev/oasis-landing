@@ -620,3 +620,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+body {
+  padding: 0 40px;
+  font-family: 'FT Switch';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: black;
+}
