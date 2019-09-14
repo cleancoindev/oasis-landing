@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
+import styled from 'styled-components'
+
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -103,14 +105,55 @@ const Questions = () => {
   })
 }
 
+const CardContainer = styled.div`
+  background-color: #EEEEEE;
+  border-radius: 15px;
+  width: 300px;
+  height: 368px;
+
+  position: relative;
+
+  .title {
+    font-size: 29px;
+    margin-top: 58px;
+  }
+
+  .description {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 27px;
+    margin-right: 23px;
+    margin-left: 23px;
+  }
+
+  .buttonContainer {
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+  }
+
+  .button {
+    padding-right: 22px;
+    padding-left: 22px;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+    height: 39px;
+    line-height: 34px;
+  }
+`
+
 const Card = ({title, content, buttonText}) => (
-  <div className="card">
+  <CardContainer>
     <div className="title">{title}</div>
     <div className="description">{content}</div>
     <div className="buttonContainer">
       <div className="button">{buttonText}</div>
     </div>
-  </div>
+  </CardContainer>
 )
 
 const IndexPage = () => (
