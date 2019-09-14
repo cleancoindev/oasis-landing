@@ -58,5 +58,11 @@ h3 {
 }
 
 .section {
-  margin-top: 76px;
+  margin-top: 81px;
+}
+
+.section p {
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 19px;
 }

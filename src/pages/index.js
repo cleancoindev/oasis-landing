@@ -124,19 +124,23 @@ const IndexPage = () => (
       <Card title="Borrow" content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD." buttonText="Borrow Dai"/>
       <Card title="Save" content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings." buttonText="Save Dai"/>
     </div>
-    <div className="section">
+    <div className="section" style={{marginTop: "76px"}}>
       <h3>Supported Tokens</h3>
       <div style={{display: "flex", justifyContent: "space-around", margin: "0 auto", maxWidth: "978px" }}>
       {Object.values(tokensMetadata).map(({name, icon}) => <Token name={name} icon={icon} />)}
       </div>
     </div>
-    <div className="section">
+    <div className="section" style={{marginTop: "95px"}}>
       <h3>What's the Story</h3>
-      <p>Oasis is a platform to interact...</p>
+      <p>Oasis is a platform to interact with the world of decentralized finance. Use it to trade tokens, loan yourself money, and earn Dai, a decentralized stablecoin pegged to the value of 1 US Dollar.</p>
+    </div>
+    <div className="section">
+      <h3>The most trusted protocol on Ethereum</h3>
+      <p>Oasis is built on top of formally verified smart contracts created by The Maker Foundation, the industry leader in secure decentralized finance.</p>
     </div>
     <div className="section">
       <h3>Completely Permissionless</h3>
-      <p>Anyone can access the system...</p>
+      <p>Anyone can access the system simply by using a wallet address, and you never have to trust a counterparty institution to approve your activity.</p>
     </div>
     <div className="section">
       <h3>General Questions</h3>
