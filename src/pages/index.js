@@ -24,6 +24,57 @@ import EmptyIcon from '../images/icons/empty.svg'
 import Cross from "../images/cross.svg"
 import Minus from "../images/minus.svg"
 
+const CardContainer = styled.div`
+  background-color: #EEEEEE;
+  border-radius: 15px;
+  width: 300px;
+  height: 368px;
+
+  position: relative;
+
+  .title {
+    font-size: 29px;
+    margin-top: 58px;
+  }
+
+  .description {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 27px;
+    margin-right: 23px;
+    margin-left: 23px;
+  }
+
+  .buttonContainer {
+    position: absolute;
+    bottom: 44px;
+    width: 100%;
+  }
+
+  .button {
+    padding-right: 22px;
+    padding-left: 22px;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+    height: 39px;
+    line-height: 34px;
+  }
+`
+
+const Card = ({title, content, buttonText}) => (
+  <CardContainer>
+    <div className="title">{title}</div>
+    <div className="description">{content}</div>
+    <div className="buttonContainer">
+      <div className="button">{buttonText}</div>
+    </div>
+  </CardContainer>
+)
+
 
 const tokensMetadata = {
   ETH: {
@@ -92,69 +143,28 @@ const Questions = () => {
   return questions.map(({q, a}, index) => {
     const isSelected = index === selectedIndex
     return (
-      <>
-        <div>{q}</div>
-        {isSelected ? (
-          <div onClick={() => setSelectedIndex(null)}><Minus /></div>
-        ): (
-          <div onClick={() => setSelectedIndex(index)}><Cross /></div>
-        )}
-        {isSelected ? <div>{a}</div> : null}
-      </>
+      <div style={{maxWidth: "632px", margin: "0 auto", textAlign: "left", fontSize: "18px"}}>
+        <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
+          {isSelected ? (
+            <div onClick={() => setSelectedIndex(null)}>
+              {q}
+              <Minus style={{float: "right"}}/>
+            </div>
+          ): (
+            <div onClick={() => setSelectedIndex(index)}>
+              {q}
+              <Cross style={{float: "right"}} />
+            </div>
+          )}
+        </div>
+        {isSelected ? <div style={{fontSize: "17px", paddingBottom: "20px"}}>{a}</div> : null}
+        {(index < questions.length - 1) ? (
+          <div style={{borderBottom: '1px solid #9E9E9E', opacity: 0.9}} />
+        ) : null}
+      </div>
     )
   })
 }
-
-const CardContainer = styled.div`
-  background-color: #EEEEEE;
-  border-radius: 15px;
-  width: 300px;
-  height: 368px;
-
-  position: relative;
-
-  .title {
-    font-size: 29px;
-    margin-top: 58px;
-  }
-
-  .description {
-    font-size: 17px;
-    line-height: 25px;
-    margin-top: 27px;
-    margin-right: 23px;
-    margin-left: 23px;
-  }
-
-  .buttonContainer {
-    position: absolute;
-    bottom: 44px;
-    width: 100%;
-  }
-
-  .button {
-    padding-right: 22px;
-    padding-left: 22px;
-    border: 1px solid black;
-    border-radius: 6px;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 500;
-    box-sizing: border-box;
-    height: 39px;
-    line-height: 34px;
-  }
-`
-
-const Card = ({title, content, buttonText}) => (
-  <CardContainer>
-    <div className="title">{title}</div>
-    <div className="description">{content}</div>
-    <div className="buttonContainer">
-      <div className="button">{buttonText}</div>
-    </div>
-  </CardContainer>
-)
 
 const IndexPage = () => (
   <Layout>
