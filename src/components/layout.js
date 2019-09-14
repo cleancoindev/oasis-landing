@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.css"
 import Header from "./header"
+import Nav from "./nav"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -36,10 +37,10 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
-          <nav>
+          <Nav>
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
-          </nav>
+          </Nav>
         </footer>
       </div>
     </>

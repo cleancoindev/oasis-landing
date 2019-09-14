@@ -637,16 +637,3 @@ footer {
   margin-top: 90px;
   margin-bottom: 108px;
 }
-
-footer nav {
-  float: right;
-  width: 171px;
-  display: flex;
-  justify-content: space-between;
-}
-
-footer nav a {
-  font-size: 17px;
-  text-decoration: none;
-  color: black;
-}
