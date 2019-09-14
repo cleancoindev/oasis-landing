@@ -62,6 +62,7 @@ const CardContainer = styled.div`
     box-sizing: border-box;
     height: 39px;
     line-height: 34px;
+    cursor: pointer;
   }
 `
 
@@ -144,7 +145,7 @@ const Questions = () => {
     const isSelected = index === selectedIndex
     return (
       <div style={{maxWidth: "632px", margin: "0 auto", textAlign: "left", fontSize: "18px"}}>
-        <div style={{paddingTop: "20px", paddingBottom: "20px"}}>
+        <div style={{paddingTop: "20px", paddingBottom: "20px", cursor: "pointer"}}>
           {isSelected ? (
             <div onClick={() => setSelectedIndex(null)}>
               {q}
