@@ -37,10 +37,8 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
           <nav>
-            <ol>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
-            </ol>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
           </nav>
         </footer>
       </div>
