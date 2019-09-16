@@ -1,13 +1,9 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 
 import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-import "../fonts/fonts.css"
 import "./index.css"
 
 import BatIcon from '../images/icons/bat.svg'
@@ -167,9 +163,47 @@ const Questions = () => {
   })
 }
 
+const Header = styled.header`
+  text-align: left;
+
+  span {
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+  }
+`
+
+const Nav = styled.nav`
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  
+  a {
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    margin-left: 64px;
+  }
+`
+
 const IndexPage = () => (
-  <Layout>
+  <div
+    style={{
+      margin: `0 auto`,
+      maxWidth: 1203,
+      paddingTop: '41px',
+    }}
+  >
     <SEO title="Oasis" />
+    <Header>
+      <span>Oasis</span>
+      <Nav>
+        <a href="#">Trade</a>
+        <a href="#">Borrow</a>
+        <a href="#">Save</a>
+      </Nav>
+    </Header>
     <div id="hero">
       Trade, borrow and save using Dai.
     </div>
@@ -200,8 +234,14 @@ const IndexPage = () => (
       <h3>General Questions</h3>
       <Questions/>
     </div>
-
-  </Layout>
+    <footer>
+      © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
+      <Nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </Nav>
+    </footer>
+  </div>
 )
 
 export default IndexPage
