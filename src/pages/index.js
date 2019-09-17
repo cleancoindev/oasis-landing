@@ -41,7 +41,7 @@ const Card = ({ title, content, buttonText, BackgroundElement, ...props }) => {
     border-radius: 15px;
     width: 300px;
     height: 355px;
-    color: #FFFFFF;
+    color: #ffffff;
     position: relative;
 
     .title {
@@ -132,20 +132,19 @@ const BlueBackground = props => {
 
 const TextSection = styled.div`
   margin-top: 81px;
-  
+
   h3 {
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 20px;
   }
-  
+
   p {
     max-width: 580px;
     margin: 0 auto;
     font-size: 19px;
-    line-height: 28px;  
+    line-height: 28px;
   }
- 
 `
 
 const tokensMetadata = {
@@ -246,25 +245,41 @@ const Questions = () => {
       >
         <div
           style={{
-            paddingTop: "20px",
+            paddingTop: "12px",
             paddingBottom: "20px",
-            cursor: "pointer",
+            letterSpacing: "0.007em",
           }}
         >
           {isSelected ? (
-            <div onClick={() => setSelectedIndex(null)}>
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => setSelectedIndex(null)}
+            >
               {q}
-              <Minus style={{ float: "right" }} />
+              <Minus style={{ float: "right", marginRight: "4px" }} />
             </div>
           ) : (
-            <div onClick={() => setSelectedIndex(index)}>
+            <div
+              style={{ cursor: "pointer" }}
+              onClick={() => setSelectedIndex(index)}
+            >
               {q}
-              <Cross style={{ float: "right" }} />
+              <Cross style={{ float: "right", marginRight: "4px" }} />
             </div>
           )}
         </div>
         {isSelected ? (
-          <div style={{ fontSize: "17px", paddingBottom: "20px" }}>{a}</div>
+          <div
+            style={{
+              fontSize: "17px",
+              marginTop: "3px",
+              paddingBottom: "21px",
+              opacity: 0.6,
+              lineHeight: "25px",
+            }}
+          >
+            {a}
+          </div>
         ) : null}
         {index < questions.length - 1 ? (
           <div style={{ borderBottom: "1px solid #9E9E9E", opacity: 0.9 }} />
@@ -320,19 +335,22 @@ const IndexPage = () => (
         content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade."
         buttonText="Start Trading"
         BackgroundElement={BlueBackground}
-        style={{boxShadow: "0px 1px 3px rgba(211, 211, 211, 0.25)"}}
+        style={{ boxShadow: "0px 1px 3px rgba(211, 211, 211, 0.25)" }}
       />
       <Card
         title="Borrow"
         content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD."
         buttonText="Borrow Dai"
-        style={{background: "linear-gradient(0deg, #ed9d52, #ed9d52)", boxShadow: "0px 1px 11px #E6F1F4"}}
+        style={{
+          background: "linear-gradient(0deg, #ed9d52, #ed9d52)",
+          boxShadow: "0px 1px 11px #E6F1F4",
+        }}
       />
       <Card
         title="Save"
         content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings."
         buttonText="Coming Soon"
-        style={{background: "#d2f0eb", color: "#7e908c"}}
+        style={{ background: "#d2f0eb", color: "#7e908c" }}
       />
     </Cards>
     <TextSection style={{ marginTop: "76px" }}>
@@ -353,19 +371,24 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "128px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens, loan yourself money, and earn Dai, a decentralized stablecoin pegged to the value of 1 US Dollar.
+        Oasis is a platform for decentralized finance. Use it to trade tokens,
+        loan yourself money, and earn Dai, a decentralized stablecoin pegged to
+        the value of 1 US Dollar.
       </p>
     </TextSection>
     <TextSection>
       <h3>The most trusted protocol on Ethereum</h3>
       <p>
-        Oasis is built on top of formally verified smart contracts created by The Maker Foundation, the industry leader in secure decentralized finance.
+        Oasis is built on top of formally verified smart contracts created by
+        The Maker Foundation, the industry leader in secure decentralized
+        finance.
       </p>
     </TextSection>
     <TextSection>
       <h3>Completely Permissionless</h3>
       <p>
-        Anyone can access the system simply by using a wallet address, and you never have to trust a counterparty institution to approve your activity.
+        Anyone can access the system simply by using a wallet address, and you
+        never have to trust a counterparty institution to approve your activity.
       </p>
     </TextSection>
     <TextSection>
