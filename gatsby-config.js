@@ -34,18 +34,18 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images/
-        }
-      }
+          include: /images/,
+        },
+      },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         custom: {
-          families: ['FT Switch'],
-          urls: ['/fonts/fonts.css']
-        }
-      }
-    }
+          families: ["FT Switch"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
 }
