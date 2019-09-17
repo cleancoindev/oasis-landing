@@ -21,6 +21,12 @@ import Cross from "../images/cross.svg"
 import Minus from "../images/minus.svg"
 import { Helmet } from "react-helmet"
 
+const Hero = styled.div`
+  color: #1E2E3A;
+  font-size: 38px;
+  margin: 97px;
+`
+
 const CardContainer = styled.div`
   background-color: #EEEEEE;
   border-radius: 15px;
@@ -202,15 +208,10 @@ const IndexPage = () => (
     </Helmet>
     <Header>
       <span>Oasis</span>
-      <Nav>
-        <a href="#">Trade</a>
-        <a href="#">Borrow</a>
-        <a href="#">Save</a>
-      </Nav>
     </Header>
-    <div id="hero">
+    <Hero>
       Trade, borrow and save using Dai.
-    </div>
+    </Hero>
     <div id="cards">
       <Card title="Trade" content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade." buttonText="Start Trading"/>
       <Card title="Borrow" content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD." buttonText="Borrow Dai"/>
