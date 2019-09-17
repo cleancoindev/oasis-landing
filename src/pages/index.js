@@ -130,16 +130,6 @@ const BlueBackground = props => {
   )
 }
 
-const OrangeBackground = styled.div`
-  background: linear-gradient(0deg, #ed9d52, #ed9d52);
-  box-shadow: 0px 1px 11px #e6f1f4;
-`
-
-const LightBlueBackground = styled.div`
- background: #d2f0eb;
-`
-
-
 const tokensMetadata = {
   ETH: {
     name: "Ethereum",
@@ -318,15 +308,13 @@ const IndexPage = () => (
         title="Borrow"
         content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD."
         buttonText="Borrow Dai"
-        BackgroundElement={OrangeBackground}
-        style={{boxShadow: "0px 1px 11px #E6F1F4"}}
+        style={{background: "linear-gradient(0deg, #ed9d52, #ed9d52)", boxShadow: "0px 1px 11px #E6F1F4"}}
       />
       <Card
         title="Save"
         content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings."
         buttonText="Coming Soon"
-        BackgroundElement={LightBlueBackground}
-        style={{color: "#7e908c"}}
+        style={{background: "#d2f0eb", color: "#7e908c"}}
       />
     </Cards>
     <div className="section" style={{ marginTop: "76px" }}>
