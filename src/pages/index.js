@@ -312,12 +312,14 @@ const IndexPage = () => (
         content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade."
         buttonText="Start Trading"
         BackgroundElement={BlueBackground}
+        style={{boxShadow: "0px 1px 3px rgba(211, 211, 211, 0.25)"}}
       />
       <Card
         title="Borrow"
         content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD."
         buttonText="Borrow Dai"
         BackgroundElement={OrangeBackground}
+        style={{boxShadow: "0px 1px 11px #E6F1F4"}}
       />
       <Card
         title="Save"
