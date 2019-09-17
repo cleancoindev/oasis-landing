@@ -130,6 +130,24 @@ const BlueBackground = props => {
   )
 }
 
+const TextSection = styled.div`
+  margin-top: 81px;
+  
+  h3 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 28px;  
+  }
+ 
+`
+
 const tokensMetadata = {
   ETH: {
     name: "Ethereum",
@@ -317,13 +335,13 @@ const IndexPage = () => (
         style={{background: "#d2f0eb", color: "#7e908c"}}
       />
     </Cards>
-    <div className="section" style={{ marginTop: "76px" }}>
+    <TextSection style={{ marginTop: "76px" }}>
       <h3>Supported Tokens</h3>
       <div
         style={{
           display: "flex",
           justifyContent: "space-around",
-          margin: "0 auto",
+          margin: "63px auto",
           maxWidth: "978px",
         }}
       >
@@ -331,34 +349,29 @@ const IndexPage = () => (
           <Token name={name} icon={icon} />
         ))}
       </div>
-    </div>
-    <div className="section" style={{ marginTop: "95px" }}>
+    </TextSection>
+    <TextSection style={{ marginTop: "128px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform to interact with the world of decentralized finance.
-        Use it to trade tokens, loan yourself money, and earn Dai, a
-        decentralized stablecoin pegged to the value of 1 US Dollar.
+        Oasis is a platform for decentralized finance. Use it to trade tokens, loan yourself money, and earn Dai, a decentralized stablecoin pegged to the value of 1 US Dollar.
       </p>
-    </div>
-    <div className="section">
+    </TextSection>
+    <TextSection>
       <h3>The most trusted protocol on Ethereum</h3>
       <p>
-        Oasis is built on top of formally verified smart contracts created by
-        The Maker Foundation, the industry leader in secure decentralized
-        finance.
+        Oasis is built on top of formally verified smart contracts created by The Maker Foundation, the industry leader in secure decentralized finance.
       </p>
-    </div>
-    <div className="section">
+    </TextSection>
+    <TextSection>
       <h3>Completely Permissionless</h3>
       <p>
-        Anyone can access the system simply by using a wallet address, and you
-        never have to trust a counterparty institution to approve your activity.
+        Anyone can access the system simply by using a wallet address, and you never have to trust a counterparty institution to approve your activity.
       </p>
-    </div>
-    <div className="section">
-      <h3>General Questions</h3>
+    </TextSection>
+    <TextSection>
+      <h3>Questions</h3>
       <Questions />
-    </div>
+    </TextSection>
     <footer>
       © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
       <Nav>

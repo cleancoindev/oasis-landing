@@ -23,18 +23,3 @@ footer {
   margin-top: 90px;
   margin-bottom: 108px;
 }
-
-h3 {
-  font-size: 28px;
-  font-weight: normal;
-}
-
-.section {
-  margin-top: 81px;
-}
-
-.section p {
-  max-width: 580px;
-  margin: 0 auto;
-  font-size: 19px;
-}
