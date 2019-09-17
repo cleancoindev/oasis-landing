@@ -19,6 +19,7 @@ import EmptyIcon from '../images/icons/empty.svg'
 
 import Cross from "../images/cross.svg"
 import Minus from "../images/minus.svg"
+import { Helmet } from "react-helmet"
 
 const CardContainer = styled.div`
   background-color: #EEEEEE;
@@ -196,6 +197,9 @@ const IndexPage = () => (
     }}
   >
     <SEO title="Oasis" />
+    <Helmet>
+      <link rel="preload" href="/fonts/fonts.css" as="style" />
+    </Helmet>
     <Header>
       <span>Oasis</span>
       <Nav>
