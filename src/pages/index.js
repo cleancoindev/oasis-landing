@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import SEO from "../components/seo"
 
+import "../styles/minireset.css"
 import "./index.css"
 
 import BatIcon from '../images/icons/bat.svg'
@@ -24,60 +25,69 @@ import { Helmet } from "react-helmet"
 const Hero = styled.div`
   color: #1E2E3A;
   font-size: 38px;
-  margin: 97px;
+  margin-top: 97px;
 `
 
-const CardContainer = styled.div`
-  background-color: #EEEEEE;
-  border-radius: 15px;
-  width: 300px;
-  height: 368px;
-
-  position: relative;
-
-  .title {
-    font-size: 29px;
-    margin-top: 58px;
-  }
-
-  .description {
-    font-size: 17px;
-    line-height: 25px;
-    margin-top: 27px;
-    margin-right: 23px;
-    margin-left: 23px;
-  }
-
-  .buttonContainer {
-    position: absolute;
-    bottom: 44px;
-    width: 100%;
-  }
-
-  .button {
-    padding-right: 22px;
-    padding-left: 22px;
-    border: 1px solid black;
-    border-radius: 6px;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: 500;
-    box-sizing: border-box;
-    height: 39px;
-    line-height: 34px;
-    cursor: pointer;
-  }
+const Cards = styled.div`
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 80px auto;
 `
 
-const Card = ({title, content, buttonText}) => (
-  <CardContainer>
-    <div className="title">{title}</div>
-    <div className="description">{content}</div>
-    <div className="buttonContainer">
-      <div className="button">{buttonText}</div>
-    </div>
-  </CardContainer>
-)
+const Card = ({title, content, buttonText}) => {
+  const CardContainer = styled.div`
+    background-color: #EEEEEE;
+    border-radius: 15px;
+    width: 300px;
+    height: 355px;
+  
+    position: relative;
+  
+    .title {
+      font-size: 29px;
+      margin-top: 58px;
+    }
+  
+    .description {
+      font-size: 17px;
+      line-height: 25px;
+      margin-top: 27px;
+      margin-right: 23px;
+      margin-left: 23px;
+    }
+  
+    .buttonContainer {
+      position: absolute;
+      bottom: 44px;
+      width: 100%;
+    }
+  
+    .button {
+      padding-right: 22px;
+      padding-left: 22px;
+      border: 1px solid black;
+      border-radius: 6px;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      box-sizing: border-box;
+      height: 39px;
+      line-height: 34px;
+      cursor: pointer;
+    }
+  `
+
+  return (
+    <CardContainer>
+      <div className="title">{title}</div>
+      <div className="description">{content}</div>
+      <div className="buttonContainer">
+        <div className="button">{buttonText}</div>
+      </div>
+    </CardContainer>
+  )
+}
 
 
 const tokensMetadata = {
@@ -212,11 +222,11 @@ const IndexPage = () => (
     <Hero>
       Trade, borrow and save using Dai.
     </Hero>
-    <div id="cards">
+    <Cards>
       <Card title="Trade" content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade." buttonText="Start Trading"/>
       <Card title="Borrow" content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD." buttonText="Borrow Dai"/>
       <Card title="Save" content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings." buttonText="Save Dai"/>
-    </div>
+    </Cards>
     <div className="section" style={{marginTop: "76px"}}>
       <h3>Supported Tokens</h3>
       <div style={{display: "flex", justifyContent: "space-around", margin: "0 auto", maxWidth: "978px" }}>
