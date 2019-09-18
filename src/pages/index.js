@@ -35,8 +35,7 @@ const Cards = styled.div`
   margin: 80px auto;
 `
 
-const Card = ({ title, content, buttonText, BackgroundElement, ...props }) => {
-  const CardContainer = styled.div`
+const CardContainer = styled.div`
     overflow: hidden;
     border-radius: 15px;
     width: 300px;
@@ -78,6 +77,7 @@ const Card = ({ title, content, buttonText, BackgroundElement, ...props }) => {
     }
   `
 
+const Card = ({ title, content, buttonText, BackgroundElement, ...props }) => {
   return (
     <CardContainer {...props}>
       {BackgroundElement ? (
@@ -330,13 +330,23 @@ const IndexPage = () => (
     </Header>
     <Hero>Trade, borrow and save using Dai.</Hero>
     <Cards>
-      <Card
-        title="Trade"
-        content="Wallet to wallet token trading. Decentralized leverage. The most secure way to trade."
-        buttonText="Start Trading"
-        BackgroundElement={BlueBackground}
-        style={{ boxShadow: "0px 1px 3px rgba(211, 211, 211, 0.25)" }}
-      />
+      <CardContainer>
+          <BlueBackground
+            style={{
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              zIndex: -1,
+            }}
+          />
+        <div className="title">Trade</div>
+        <div className="description">Wallet to wallet token trading. Decentralized leverage. The most secure way to trade.</div>
+        <div className="buttonContainer">
+          <a href="https://oasis.app/trade" style={{color: "white"}}>
+            <div className="button">Start Trading</div>
+          </a>
+        </div>
+      </CardContainer>
       <Card
         title="Borrow"
         content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD."
