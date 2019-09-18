@@ -32,7 +32,12 @@ const Cards = styled.div`
   max-width: 1000px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 80px auto;
+  
+  @media only screen and (max-width: 980px) {
+    max-width: 300px;
+  }
 `
 
 const Card = styled.div`
@@ -42,7 +47,11 @@ const Card = styled.div`
     height: 355px;
     color: #ffffff;
     position: relative;
-
+    
+    @media only screen and (max-width: 980px) {
+      margin-bottom: 35px;
+    }
+  
     .title {
       font-size: 29px;
       margin-top: 58px;
@@ -337,7 +346,7 @@ const IndexPage = () => (
           <div className="button" style={{backgroundColor: "#C37F47"}}>Coming Soon</div>
         </div>
       </Card>
-      <Card style={{ background: "#d2f0eb", color: "#7e908c" }}>
+      <Card style={{ background: "#d2f0eb", color: "#7e908c", marginBottom: 0 }}>
         <div className="title">Save</div>
         <div className="description">Start earning savings on your Dai by locking it into the Maker Vault. Automatic, non-custodial savings.</div>
         <div className="buttonContainer">
