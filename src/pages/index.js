@@ -35,7 +35,7 @@ const Cards = styled.div`
   margin: 80px auto;
 `
 
-const CardContainer = styled.div`
+const Card = styled.div`
     overflow: hidden;
     border-radius: 15px;
     width: 300px;
@@ -73,31 +73,8 @@ const CardContainer = styled.div`
       box-sizing: border-box;
       height: 39px;
       line-height: 34px;
-      cursor: pointer;
     }
   `
-
-const Card = ({ title, content, buttonText, BackgroundElement, ...props }) => {
-  return (
-    <CardContainer {...props}>
-      {BackgroundElement ? (
-        <BackgroundElement
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "absolute",
-            zIndex: -1,
-          }}
-        />
-      ) : null}
-      <div className="title">{title}</div>
-      <div className="description">{content}</div>
-      <div className="buttonContainer">
-        <div className="button">{buttonText}</div>
-      </div>
-    </CardContainer>
-  )
-}
 
 const BlueBackground = props => {
   const Container = styled.div`
@@ -330,15 +307,15 @@ const IndexPage = () => (
     </Header>
     <Hero>Trade, borrow and save using Dai.</Hero>
     <Cards>
-      <CardContainer>
-          <BlueBackground
-            style={{
-              width: "100%",
-              height: "100%",
-              position: "absolute",
-              zIndex: -1,
-            }}
-          />
+      <Card>
+        <BlueBackground
+          style={{
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            zIndex: -1,
+          }}
+        />
         <div className="title">Trade</div>
         <div className="description">Wallet to wallet token trading. Decentralized leverage. The most secure way to trade.</div>
         <div className="buttonContainer">
@@ -346,22 +323,24 @@ const IndexPage = () => (
             <div className="button">Start Trading</div>
           </a>
         </div>
-      </CardContainer>
-      <Card
-        title="Borrow"
-        content="Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD."
-        buttonText="Borrow Dai"
-        style={{
-          background: "linear-gradient(0deg, #ed9d52, #ed9d52)",
-          boxShadow: "0px 1px 11px #E6F1F4",
-        }}
-      />
-      <Card
-        title="Save"
-        content="Save by holding Dai. Track your interest over time. Automatic, non-custodial savings."
-        buttonText="Coming Soon"
-        style={{ background: "#d2f0eb", color: "#7e908c" }}
-      />
+      </Card>
+      <Card style={{
+        background: "linear-gradient(0deg, #ed9d52, #ed9d52)",
+        boxShadow: "0px 1px 11px #E6F1F4",
+      }}>
+        <div className="title">Borrow</div>
+        <div className="description">Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.</div>
+        <div className="buttonContainer">
+          <div className="button">Borrow Dai</div>
+        </div>
+      </Card>
+      <Card style={{ background: "#d2f0eb", color: "#7e908c" }}>
+        <div className="title">Save</div>
+        <div className="description">Save by holding Dai. Track your interest over time. Automatic, non-custodial savings.</div>
+        <div className="buttonContainer">
+          <div className="button">Coming Soon</div>
+        </div>
+      </Card>
     </Cards>
     <TextSection style={{ marginTop: "76px" }}>
       <h3>Supported Tokens</h3>
