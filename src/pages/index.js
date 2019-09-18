@@ -65,14 +65,17 @@ const Card = styled.div`
     .button {
       padding-right: 22px;
       padding-left: 22px;
-      border: 1px solid white;
       border-radius: 6px;
       display: inline-block;
       font-size: 15px;
       font-weight: 500;
-      box-sizing: border-box;
       height: 39px;
       line-height: 34px;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      opacity: 0.85;
     }
   `
 
@@ -317,10 +320,10 @@ const IndexPage = () => (
           }}
         />
         <div className="title">Trade</div>
-        <div className="description">Wallet to wallet token trading. Decentralized leverage. The most secure way to trade.</div>
+        <div className="description">Wallet to wallet token trading. Place orders on the Exchange, or simply Swap your tokens instantly for the market price.</div>
         <div className="buttonContainer">
-          <a href="https://oasis.app/trade" style={{color: "white"}}>
-            <div className="button">Start Trading</div>
+          <a href="https://oasis.app/trade" className="button" style={{color: "black", backgroundColor: "white"}}>
+            Start Trading
           </a>
         </div>
       </Card>
@@ -329,16 +332,16 @@ const IndexPage = () => (
         boxShadow: "0px 1px 11px #E6F1F4",
       }}>
         <div className="title">Borrow</div>
-        <div className="description">Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.</div>
+        <div className="description">Lock your tokens in the Maker Vault to generate Dai, a decentralized cryptocurrency pegged to the value of 1 USD.</div>
         <div className="buttonContainer">
-          <div className="button">Borrow Dai</div>
+          <div className="button" style={{backgroundColor: "#C37F47"}}>Coming Soon</div>
         </div>
       </Card>
       <Card style={{ background: "#d2f0eb", color: "#7e908c" }}>
         <div className="title">Save</div>
-        <div className="description">Save by holding Dai. Track your interest over time. Automatic, non-custodial savings.</div>
+        <div className="description">Start earning savings on your Dai by locking it into the Maker Vault. Automatic, non-custodial savings.</div>
         <div className="buttonContainer">
-          <div className="button">Coming Soon</div>
+          <div className="button" style={{backgroundColor: "#c5e3de"}}>Coming Soon</div>
         </div>
       </Card>
     </Cards>
