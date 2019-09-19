@@ -235,6 +235,18 @@ const Questions = () => {
 
   return questions.map(({ q, a }, index) => {
     const isSelected = index === selectedIndex
+    const Question = ({isSelected, index, children}) => {
+      const Icon = isSelected ? Minus : Cross
+      return (
+        <div
+          style={{ cursor: "pointer", marginRight: "25px" }}
+          onClick={() => setSelectedIndex(isSelected ? null : index)}
+        >
+          {children}
+          <Icon style={{ position: "absolute", right: "4px", top: "16px" }} />
+        </div>
+      )
+    }
     return (
       <div
         style={{
@@ -253,23 +265,7 @@ const Questions = () => {
             position: "relative",
           }}
         >
-          {isSelected ? (
-            <div
-              style={{ cursor: "pointer", marginRight: "25px" }}
-              onClick={() => setSelectedIndex(null)}
-            >
-              {q}
-              <Minus style={{ position: "absolute", right: "4px", top: "16px" }} />
-            </div>
-          ) : (
-            <div
-              style={{ cursor: "pointer", marginRight: "25px" }}
-              onClick={() => setSelectedIndex(index)}
-            >
-              {q}
-              <Cross style={{ position: "absolute", right: "4px", top: "16px" }} />
-            </div>
-          )}
+          <Question isSelected={isSelected} index={index}>{q}</Question>
         </div>
         {isSelected ? (
           <div
