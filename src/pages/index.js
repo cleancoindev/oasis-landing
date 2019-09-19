@@ -338,7 +338,11 @@ const IndexPage = () => (
           }}
         />
         <div className="title">Trade</div>
-        <div className="description">Wallet to wallet token trading. Place orders on the Exchange, or simply Swap your tokens instantly for the market price.</div>
+        <div className="description">
+          The most secure way to trade.
+          Wallet to wallet token trading.
+          Decentralized leverage.
+        </div>
         <div className="buttonContainer">
           <a href="https://oasis.app/trade" className="button" style={{color: "black", backgroundColor: "white"}}>
             Start Trading
@@ -350,14 +354,18 @@ const IndexPage = () => (
         boxShadow: "0px 1px 11px #E6F1F4",
       }}>
         <div className="title">Borrow</div>
-        <div className="description">Lock your tokens in the Maker Vault to generate Dai, a decentralized cryptocurrency pegged to the value of 1 USD.</div>
+        <div className="description">
+          Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
+        </div>
         <div className="buttonContainer">
           <div className="button" style={{backgroundColor: "#C37F47"}}>Coming Soon</div>
         </div>
       </Card>
       <Card style={{ background: "#d2f0eb", color: "#7e908c", marginBottom: 0 }}>
         <div className="title">Save</div>
-        <div className="description">Start earning savings on your Dai by locking it into the Maker Vault. Automatic, non-custodial savings.</div>
+        <div className="description">
+          Earn savings on your Dai by locking it into a Maker Vault. Automatic and non-custodial.
+        </div>
         <div className="buttonContainer">
           <div className="button" style={{backgroundColor: "#c5e3de"}}>Coming Soon</div>
         </div>
@@ -374,13 +382,11 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "108px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens,
-        loan yourself money, and earn Dai, a decentralized stablecoin pegged to
-        the value of 1 US Dollar.
+        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings — all in one place.
       </p>
     </TextSection>
     <TextSection>
-      <h3>The most trusted protocol on Ethereum</h3>
+      <h3>Secure protocol built on Ethereum</h3>
       <p>
         Oasis is built on top of formally verified smart contracts created by
         The Maker Foundation, the industry leader in secure decentralized
@@ -390,8 +396,7 @@ const IndexPage = () => (
     <TextSection>
       <h3>Completely Permissionless</h3>
       <p>
-        Anyone can access the system simply by using a wallet address, and you
-        never have to trust a counterparty institution to approve your activity.
+        Anyone can access the system simply by using a wallet address, and you never have to trust a counterparty institution to approve your activity.
       </p>
     </TextSection>
     <TextSection>
