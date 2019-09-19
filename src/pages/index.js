@@ -136,36 +136,36 @@ const TextSection = styled.div`
   }
 `
 
-const tokensMetadata = {
-  ETH: {
+const tokens = [
+  {
     name: "Ethereum",
     icon: EthIcon,
   },
-  WBTC: {
+  {
     name: "Wrapped Bitcoin",
     icon: WbtcIcon,
   },
-  USDC: {
+  {
     name: "USD Coin",
     icon: UsdcIcon,
   },
-  OMG: {
+  {
     name: "OmiseGO",
     icon: OmgIcon,
   },
-  REP: {
+  {
     name: "Augur",
     icon: RepIcon,
   },
-  ZRX: {
+  {
     name: "0x",
     icon: ZrxIcon,
   },
-  DGD: {
+  {
     name: "Digix Gold Token",
     icon: DgdIcon,
   },
-}
+]
 
 const TokenList = styled.div`
   max-width: 978px;
@@ -366,7 +366,7 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "103px" }}>
       <h3>Supported Tokens</h3>
       <TokenList>
-        {Object.values(tokensMetadata).map(({ name, icon }) => (
+        {tokens.map(({ name, icon }) => (
           <Token name={name} icon={icon} key={name} />
         ))}
       </TokenList>
