@@ -1,7 +1,7 @@
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
   padding: 0 40px;
   font-family: FT Switch;
   font-weight: normal;
@@ -14,14 +14,6 @@ body {
   body {
     padding: 0 10px;
   }
-}
-
-footer {
-  text-align: left;
-  font-size: 16px;
-  letter-spacing: 0.3px;
-  margin-top: 90px;
-  margin-bottom: 108px;
 }
 
 a {

@@ -2,6 +2,8 @@ import React, { useState } from "react"
 
 import styled from "styled-components"
 
+import {mobileL} from "../util/screen-sizes"
+
 import SEO from "../components/seo"
 
 import "../styles/minireset.css"
@@ -59,7 +61,6 @@ const Card = styled.div`
 
   .description {
     font-size: 17px;
-    line-height: 25px;
     margin-top: 25px;
     margin-right: 23px;
     margin-left: 23px;
@@ -279,16 +280,37 @@ const Header = styled.header`
   }
 `
 
-const Nav = styled.nav`
-  float: right;
-  display: flex;
-  justify-content: space-between;
+const Footer = styled.footer`
+  margin-top: 90px;
+  margin-bottom: 108px;
 
-  a {
-    font-size: 17px;
-    text-decoration: none;
-    color: black;
-    margin-left: 64px;
+  nav {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+  
+    a {
+      font-size: 17px;
+      text-decoration: none;
+      color: black;
+      margin-left: 64px;
+    }
+  }
+  
+  .copyright {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    
+    @media (max-width: 640px) {
+      padding-top: 60px;
+      text-align: center; 
+    }
+    
+    @media (max-width: ${mobileL}) {
+      font-size: 12px;  
+    }
   }
 `
 
@@ -375,13 +397,15 @@ const IndexPage = () => (
       <h3>Questions</h3>
       <Questions />
     </TextSection>
-    <footer>
-      © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
-      <Nav>
+    <Footer>
+      <nav>
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
-      </Nav>
-    </footer>
+      </nav>
+      <div className="copyright">
+      © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
+      </div>
+    </Footer>
   </div>
 )
 
