@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import styled from "styled-components"
 
-import {mobileL} from "../util/screen-sizes"
+import {laptop, mobileL} from "../util/screen-sizes"
 
 import SEO from "../components/seo"
 
@@ -37,7 +37,7 @@ const Cards = styled.div`
   flex-wrap: wrap;
   margin: 80px auto;
   
-  @media (max-width: 980px) {
+  @media (max-width: ${laptop}) {
     max-width: 300px;
   }
 `
@@ -50,7 +50,7 @@ const Card = styled.div`
   color: #ffffff;
   position: relative;
   
-  @media (max-width: 980px) {
+  @media (max-width: ${laptop}) {
     margin-bottom: 35px;
   }
 
