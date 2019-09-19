@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "name": "Oasis Landing",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ],
+  "github": {
+    "enabled": false
+  }
+}
