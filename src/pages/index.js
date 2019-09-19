@@ -41,83 +41,53 @@ const Cards = styled.div`
 `
 
 const Card = styled.div`
-    overflow: hidden;
-    border-radius: 15px;
-    width: 300px;
-    height: 355px;
-    color: #ffffff;
-    position: relative;
-    
-    @media (max-width: 980px) {
-      margin-bottom: 35px;
-    }
+  overflow: hidden;
+  border-radius: 15px;
+  width: 300px;
+  height: 355px;
+  color: #ffffff;
+  position: relative;
   
-    .title {
-      font-size: 29px;
-      margin-top: 58px;
-    }
+  @media (max-width: 980px) {
+    margin-bottom: 35px;
+  }
 
-    .description {
-      font-size: 17px;
-      line-height: 25px;
-      margin-top: 27px;
-      margin-right: 23px;
-      margin-left: 23px;
-    }
+  .title {
+    font-size: 29px;
+    margin-top: 56px;
+  }
 
-    .buttonContainer {
-      position: absolute;
-      bottom: 44px;
-      width: 100%;
-    }
+  .description {
+    font-size: 17px;
+    line-height: 25px;
+    margin-top: 25px;
+    margin-right: 23px;
+    margin-left: 23px;
+    line-height: 26px;
+  }
 
-    .button {
-      padding-right: 22px;
-      padding-left: 22px;
-      border-radius: 6px;
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 500;
-      height: 39px;
-      line-height: 34px;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      opacity: 0.85;
-    }
-  `
-
-const BlueBackground = props => {
-  const Container = styled.div`
-    background: #3b7ea6;
-    box-shadow: 0px 1px 3px rgba(211, 211, 211, 0.25);
-    position: relative;
-    overflow: hidden;
-  `
-
-  const Circle = styled.div`
-    width: 217px;
-    height: 217px;
-    background: linear-gradient(
-      180deg,
-      #ffffff 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.3;
-    border-radius: 109px;
-
+  .buttonContainer {
     position: absolute;
-    left: 150px;
-    top: 215px;
-  `
+    bottom: 32px;
+    width: 100%;
+  }
 
-  return (
-    <Container {...props}>
-      <Circle />
-    </Container>
-  )
-}
+  .button {
+    padding-right: 22px;
+    padding-left: 22px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 39px;
+    line-height: 38px;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    opacity: 0.85;
+  }
+`
 
 const TextSection = styled.div`
   margin-top: 81px;
@@ -333,46 +303,37 @@ const IndexPage = () => (
     </Header>
     <Hero>Trade, borrow and save using Dai.</Hero>
     <Cards>
-      <Card>
-        <BlueBackground
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "absolute",
-            zIndex: -1,
-          }}
-        />
-        <div className="title">Trade</div>
-        <div className="description">
+      <Card style={{background: "linear-gradient(180deg, #C2D7E4 0%, #DBF1EC 100%), #7AAAC5"}}>
+        <div className="title" style={{color: "#253A44"}}>Trade</div>
+        <div className="description" style={{color: "#14303A"}}>
           The most secure way to trade.
           Wallet to wallet token trading.
           Decentralized leverage.
         </div>
         <div className="buttonContainer">
-          <a href="https://oasis.app/trade" className="button" style={{color: "black", backgroundColor: "white"}}>
+          <a href="https://oasis.app/trade" className="button" style={{color: "#5894B5", backgroundColor: "white", boxShadow: "0px 2px 2px #C8E4E6"}}>
             Start Trading
           </a>
         </div>
       </Card>
       <Card style={{
-        background: "linear-gradient(0deg, #ed9d52, #ed9d52)",
-        boxShadow: "0px 1px 11px #E6F1F4",
+        background: "linear-gradient(180deg, #F0DED8 0%, #FDF2E1 100%), linear-gradient(0deg, #EFBF98, #EFBF98)",
       }}>
-        <div className="title">Borrow</div>
-        <div className="description">
+        <div className="title" style={{color: "#5B2E1B"}}>Borrow</div>
+        <div className="description" style={{color: "#5B2E1B"}}>
           Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
         </div>
         <div className="buttonContainer">
-          <div className="button" style={{backgroundColor: "#C37F47"}}>Coming Soon</div>
+          <div className="button" style={{color: "#5D2D00", opacity: 0.6}}>Coming Soon</div>
         </div>
       </Card>
-      <Card style={{ background: "#d2f0eb", color: "#7e908c", marginBottom: 0 }}>
-        <div className="title">Save</div>
-        <div className="description">
+      <Card style={{ background: "linear-gradient(180deg, #D5E8E3 0%, #EEF0E4 100%)", marginBottom: 0 }}>
+        <div className="title" style={{color: "#002F28"}}>Save</div>
+        <div className="description" style={{color: "#002F28"}}>
           Earn savings on your Dai by locking it into a Maker Vault. Automatic and non-custodial.
         </div>
         <div className="buttonContainer">
-          <div className="button" style={{backgroundColor: "#c5e3de"}}>Coming Soon</div>
+          <div className="button" style={{color: "#002F28", opacity: 0.6}}>Coming Soon</div>
         </div>
       </Card>
     </Cards>
