@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 
 import styled from "styled-components"
 
@@ -169,6 +169,102 @@ const Token = ({ name, icon }) => {
   )
 }
 
+const QuestionWrapper = styled.div`
+  position: relative;
+  list-style: none;
+  li {
+    &.active {
+      .answer {
+        max-height:275px !important;
+        padding-bottom:25px;
+        transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+      }
+    }
+  }
+  .answer {
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s ease, padding-bottom 0.5s ease;
+  }
+  
+  .plus-minus-toggle {
+    cursor: pointer;
+    height: 21px;
+    position: absolute;
+    width: 21px;
+    right: 4px;
+    top: 50%;
+    z-index:2;
+
+    &:before,
+    &:after {
+      background: #000;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 21px;
+      transition: transform 500ms ease;
+    }
+
+    &:after {
+      transform-origin: center;
+    }
+  }
+  
+  &.collapsed {
+    .plus-minus-toggle {
+      &:after {
+          transform: rotate(90deg);
+        }
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+  }
+`
+
+
+const QuestionAndAnswer = ({question, answer, onClick, isSelected}) => {
+
+  return (
+    <div key={question}>
+      <div
+        style={{
+          paddingTop: "14px",
+          paddingBottom: "18px",
+          letterSpacing: "0.007em",
+          position: "relative",
+        }}
+      >
+        <QuestionWrapper
+          style={{ cursor: "pointer" }}
+          onClick={onClick}
+          className={isSelected ? "" : "collapsed" }
+        >
+          <div style={{marginRight: "25px"}}>
+            {question}
+          </div>
+          <div className={`plus-minus-toggle`} />
+        </QuestionWrapper>
+      </div>
+      {isSelected ? (
+        <div
+          style={{
+            fontSize: "17px",
+            paddingBottom: "21px",
+            color: "#6F6F6F",
+          }}
+        >
+          {answer}
+        </div>
+      ) : null}
+    </div>
+  )
+}
+
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
 
@@ -217,50 +313,15 @@ const Questions = () => {
 
   return questions.map(({ q, a }, index) => {
     const isSelected = index === selectedIndex
-    const Question = ({isSelected, index, children}) => {
-      const Icon = isSelected ? Minus : Cross
-      return (
-        <div
-          style={{ cursor: "pointer", marginRight: "25px" }}
-          onClick={() => setSelectedIndex(isSelected ? null : index)}
-        >
-          {children}
-          <Icon style={{ position: "absolute", right: "4px", top: "16px" }} />
-        </div>
-      )
-    }
     return (
-      <div
-        style={{
-          maxWidth: "632px",
-          margin: "0 auto",
-          textAlign: "left",
-          fontSize: "18px",
-          lineHeight: "25px",
-        }}
-        key={q}
-      >
-        <div
-          style={{
-            paddingTop: "14px",
-            paddingBottom: "18px",
-            letterSpacing: "0.007em",
-            position: "relative",
-          }}
-        >
-          <Question isSelected={isSelected} index={index}>{q}</Question>
-        </div>
-        {isSelected ? (
-          <div
-            style={{
-              fontSize: "17px",
-              paddingBottom: "21px",
-              color: "#6F6F6F",
-            }}
-          >
-            {a}
-          </div>
-        ) : null}
+      <div style={{
+        maxWidth: "632px",
+        margin: "0 auto",
+        textAlign: "left",
+        fontSize: "18px",
+        lineHeight: "25px",
+      }}>
+        <QuestionAndAnswer question={q} answer={a} onClick={() => setSelectedIndex(isSelected ? null : index)} isSelected={isSelected}/>
         {index < questions.length - 1 ? (
           <div style={{ borderBottom: "1px solid #9E9E9E", opacity: 0.9 }} />
         ) : null}
