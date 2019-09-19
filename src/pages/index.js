@@ -199,37 +199,42 @@ const Questions = () => {
     {
       q: "What is Oasis?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        "Oasis is a decentralized application which runs on the Ethereum blockchain. Allowing anyone to trade tokens, borrow against them and earn savings using Dai.",
     },
     {
-      q: "How secure is Oasis?",
+      q: "What is Dai?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        <span>Dai is a stablecoin pegged to the USD. 1 Dai = $1 USD. Read more at <a href="https://makerdao.com/dai/" target="_blank">here</a>.</span>,
     },
     {
-      q: "Do I need an account to use Oasis?",
+      q: "Do I need an account?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        "You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum wallets such as Metamask, Coinbase Wallet, Ledger.",
     },
     {
-      q: "How do I borrow Dai?",
+      q: "Why are Borrow and Save not yet available?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        <span>Borrow and Save are features coming with the launch of Multi-Collateral Dai. You can track <a href="https://makerdao.com/roadmap/" target="_blank">Multi-Collateral Dai progress here</a>.</span>,
     },
     {
-      q: "How do I trade my tokens?",
+      q: "Is it secure?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        "We conduct a range of audits on all of our smart contracts and the Oasis code is open-source.",
     },
     {
-      q: "Does Oasis charge fees?",
+      q: "Are there fees?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        "Oasis does not charge any fees, although you will have to pay gas costs for each transaction you make.",
     },
     {
-      q: "How can I exchange fiat to Dai?",
+      q: "I have a question, how can I get in contact with you?",
       a:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis.",
+        <span>You can reach the team by contacting us on <a href="https://chat.makerdao.com" target="_blank">our chat</a>.</span>,
+    },
+    {
+      q: "Can I buy Bitcoin or Ethereum with my bank account on Oasis?",
+      a:
+        "You cannot buy crypto from your bank account using Oasis. Instead you can use Dai, to buy Ethereum and other supported tokens. ",
     },
   ]
 
@@ -273,7 +278,7 @@ const Questions = () => {
             style={{
               fontSize: "17px",
               paddingBottom: "21px",
-              opacity: 0.6,
+              color: "#6F6F6F",
             }}
           >
             {a}
