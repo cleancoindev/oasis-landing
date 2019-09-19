@@ -35,7 +35,7 @@ const Cards = styled.div`
   flex-wrap: wrap;
   margin: 80px auto;
   
-  @media only screen and (max-width: 980px) {
+  @media (max-width: 980px) {
     max-width: 300px;
   }
 `
@@ -48,7 +48,7 @@ const Card = styled.div`
     color: #ffffff;
     position: relative;
     
-    @media only screen and (max-width: 980px) {
+    @media (max-width: 980px) {
       margin-bottom: 35px;
     }
   
@@ -167,18 +167,30 @@ const tokensMetadata = {
   },
 }
 
-const Token = ({ name, icon: Icon }) => (
-  <div style={{ display: "flex", alignItems: "center" }}>
-    {Icon ? (
-      <Icon width="22" height="22" />
-    ) : (
-      <EmptyIcon width="22" height="22" />
-    )}
-    <span style={{ fontSize: "15px", lineHeight: "22px", marginLeft: "13px" }}>
-      {name}
-    </span>
-  </div>
-)
+const TokenList = styled.div`
+  max-width: 978px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+  margin: 43px auto;
+  
+  @media (max-width: 1000px) {
+    max-width: 560px;
+  }
+`
+
+const Token = ({ name, icon }) => {
+  const Icon = icon || EmptyIcon
+  return (
+    <div style={{ display: "flex", alignItems: "center", margin: "20px 15px" }}>
+      <Icon width="22" height="22" style={{flexGrow: 0, flexShrink: 0}}/>
+      <span style={{ fontSize: "15px", lineHeight: "22px", marginLeft: "13px", flexGrow: 0, flexShrink: 0 }}>
+        {name}
+      </span>
+    </div>
+  )
+}
 
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
@@ -354,22 +366,15 @@ const IndexPage = () => (
         </div>
       </Card>
     </Cards>
-    <TextSection style={{ marginTop: "76px" }}>
+    <TextSection style={{ marginTop: "103px" }}>
       <h3>Supported Tokens</h3>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          margin: "63px auto",
-          maxWidth: "978px",
-        }}
-      >
+      <TokenList>
         {Object.values(tokensMetadata).map(({ name, icon }) => (
           <Token name={name} icon={icon} />
         ))}
-      </div>
+      </TokenList>
     </TextSection>
-    <TextSection style={{ marginTop: "128px" }}>
+    <TextSection style={{ marginTop: "108px" }}>
       <h3>What's the Story</h3>
       <p>
         Oasis is a platform for decentralized finance. Use it to trade tokens,
