@@ -256,6 +256,7 @@ const Questions = () => {
           fontSize: "18px",
           lineHeight: "25px",
         }}
+        key={q}
       >
         <div
           style={{
@@ -366,7 +367,7 @@ const IndexPage = () => (
       <h3>Supported Tokens</h3>
       <TokenList>
         {Object.values(tokensMetadata).map(({ name, icon }) => (
-          <Token name={name} icon={icon} />
+          <Token name={name} icon={icon} key={name} />
         ))}
       </TokenList>
     </TextSection>
