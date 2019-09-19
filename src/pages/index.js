@@ -135,15 +135,21 @@ const tokens = [
     name: "Digix Gold Token",
     icon: DgdIcon,
   },
+  {
+    name: "Basic Attention Token",
+    icon: BatIcon,
+  },
 ]
+
+const selectedTokens = ["Ethereum", "0x", "Basic Attention Token"]
 
 const TokenList = styled.div`
   max-width: 978px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-content: space-between;
   flex-wrap: wrap;
-  margin: 43px auto;
+  margin: 40px auto;
   
   @media (max-width: 1000px) {
     max-width: 560px;
@@ -153,7 +159,7 @@ const TokenList = styled.div`
 const Token = ({ name, icon }) => {
   const Icon = icon || EmptyIcon
   return (
-    <div style={{ display: "flex", alignItems: "center", margin: "20px 15px" }}>
+    <div style={{ display: "flex", alignItems: "center", margin: "20px 35px" }}>
       <Icon width="22" height="22" style={{flexGrow: 0, flexShrink: 0}}/>
       <span style={{ fontSize: "15px", lineHeight: "22px", marginLeft: "13px", flexGrow: 0, flexShrink: 0 }}>
         {name}
@@ -340,7 +346,7 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "103px" }}>
       <h3>Supported Tokens</h3>
       <TokenList>
-        {tokens.map(({ name, icon }) => (
+        {tokens.filter(t => selectedTokens.includes(t.name)).map(({ name, icon }) => (
           <Token name={name} icon={icon} key={name} />
         ))}
       </TokenList>
