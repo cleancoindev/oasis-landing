@@ -247,8 +247,8 @@ const Questions = () => {
       >
         <div
           style={{
-            paddingTop: "12px",
-            paddingBottom: "20px",
+            paddingTop: "14px",
+            paddingBottom: "18px",
             letterSpacing: "0.007em",
             position: "relative",
           }}
@@ -259,7 +259,7 @@ const Questions = () => {
               onClick={() => setSelectedIndex(null)}
             >
               {q}
-              <Minus style={{ position: "absolute", right: "4px", top: "12px" }} />
+              <Minus style={{ position: "absolute", right: "4px", top: "16px" }} />
             </div>
           ) : (
             <div
@@ -267,7 +267,7 @@ const Questions = () => {
               onClick={() => setSelectedIndex(index)}
             >
               {q}
-              <Cross style={{ position: "absolute", right: "4px", top: "12px" }} />
+              <Cross style={{ position: "absolute", right: "4px", top: "16px" }} />
             </div>
           )}
         </div>
@@ -275,7 +275,6 @@ const Questions = () => {
           <div
             style={{
               fontSize: "17px",
-              marginTop: "3px",
               paddingBottom: "21px",
               opacity: 0.6,
             }}
