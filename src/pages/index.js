@@ -199,7 +199,7 @@ const QuestionAndAnswerStyle = styled.div`
 
   &.active {
     .answer {
-      max-height: 100px !important;
+      max-height: 150px !important;
       padding-bottom: 21px;
       transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
     }
