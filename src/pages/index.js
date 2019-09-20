@@ -167,63 +167,63 @@ const Token = ({ name, icon }) => {
   )
 }
 
-const QuestionWrapper = styled.div`
-  position: relative;
-  list-style: none;
-  li {
+const QuestionAndAnswerStyle = styled.div`
+    position: relative;
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
+    }
+    
     &.active {
       .answer {
-        max-height:275px !important;
-        padding-bottom:25px;
-        transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+        max-height: 100px !important;
+        padding-bottom: 21px;
+        transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
       }
     }
-  }
-  .answer {
-    max-height:0;
-    overflow:hidden;
-    transition:max-height 0.5s ease, padding-bottom 0.5s ease;
-  }
-  
-  .plus-minus-toggle {
-    cursor: pointer;
-    height: 21px;
-    position: absolute;
-    width: 21px;
-    right: 4px;
-    top: 50%;
-    z-index:2;
-
-    &:before,
-    &:after {
-      background: #000;
-      content: '';
-      height: 1px;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 21px;
-      transition: transform 500ms ease, opacity 500ms ease;
-    }
-
-    &:after {
-      transform-origin: center;
-      opacity: 0;
-    }
-  }
-  
-  &.collapsed {
     .plus-minus-toggle {
+      cursor: pointer;
+      height: 21px;
+      position: absolute;
+      width: 21px;
+      right: 4px;
+      top: 50%;
+      z-index:2;
+  
+      &:before,
       &:after {
-          transform: rotate(90deg);
-          opacity: 1.0;
-        }
-
-      &:before {
-        transform: rotate(180deg);
+        background: #000;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 21px;
+        transition: transform 500ms ease, opacity 500ms ease;
+      }
+  
+      &:after {
+        transform-origin: center;
+        opacity: 0;
       }
     }
-  }
+    
+    &.active {
+    .plus-minus-toggle {
+        &:after {
+            transform: rotate(90deg);
+            opacity: 1.0;
+          }
+  
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    
+    
 `
 
 
