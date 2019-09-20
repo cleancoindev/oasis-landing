@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react"
+import React, { useState } from "react"
 
 import styled from "styled-components"
 
-import {laptop, mobileL} from "../util/screen-sizes"
+import {mobileL} from "../util/screen-sizes"
 
 import SEO from "../components/seo"
 
@@ -20,8 +20,6 @@ import UsdcIcon from "../images/icons/usdc.svg"
 import WbtcIcon from "../images/icons/wbtc.svg"
 import EmptyIcon from "../images/icons/empty.svg"
 
-import Cross from "../images/cross.svg"
-import Minus from "../images/minus.svg"
 import { Helmet } from "react-helmet"
 
 const Hero = styled.div`
