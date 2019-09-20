@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import styled from "styled-components"
 
-import {mobileL} from "../util/screen-sizes"
+import { mobileL } from "../util/screen-sizes"
 
 import SEO from "../components/seo"
 
@@ -34,7 +34,7 @@ const Cards = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 80px auto;
-  
+
   @media (max-width: 1020px) {
     max-width: 300px;
   }
@@ -47,7 +47,7 @@ const Card = styled.div`
   height: 355px;
   color: #ffffff;
   position: relative;
-  
+
   @media (max-width: 1020px) {
     margin-bottom: 35px;
   }
@@ -82,7 +82,7 @@ const Card = styled.div`
     line-height: 38px;
     text-decoration: none;
   }
-  
+
   a:hover {
     opacity: 0.85;
   }
@@ -149,7 +149,7 @@ const TokenList = styled.div`
   align-content: space-between;
   flex-wrap: wrap;
   margin: 40px auto;
-  
+
   @media (max-width: 1000px) {
     max-width: 560px;
   }
@@ -159,8 +159,16 @@ const Token = ({ name, icon }) => {
   const Icon = icon || EmptyIcon
   return (
     <div style={{ display: "flex", alignItems: "center", margin: "20px 35px" }}>
-      <Icon width="22" height="22" style={{flexGrow: 0, flexShrink: 0}}/>
-      <span style={{ fontSize: "15px", lineHeight: "22px", marginLeft: "13px", flexGrow: 0, flexShrink: 0 }}>
+      <Icon width="22" height="22" style={{ flexGrow: 0, flexShrink: 0 }} />
+      <span
+        style={{
+          fontSize: "15px",
+          lineHeight: "22px",
+          marginLeft: "13px",
+          flexGrow: 0,
+          flexShrink: 0,
+        }}
+      >
         {name}
       </span>
     </div>
@@ -168,97 +176,86 @@ const Token = ({ name, icon }) => {
 }
 
 const QuestionAndAnswerStyle = styled.div`
+  position: relative;
+
+  .question-row {
+    padding-top: 14px;
+    padding-bottom: 18px;
+    letter-spacing: 0.007em;
     position: relative;
-    
-    .question-row {
-      padding-top: 14px;
-      padding-bottom: 18px;
-      letter-spacing: 0.007em;
-      position: relative;
-    }
-    
-    .question {
-      margin-right: 25px;
-    }
-    
+  }
+
+  .question {
+    margin-right: 25px;
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
+    font-size: 17px;
+    color: #6f6f6f;
+  }
+
+  &.active {
     .answer {
-      max-height: 0;
-      overflow: hidden;
+      max-height: 100px !important;
+      padding-bottom: 21px;
       transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
-      font-size: 17px;
-      color: #6F6F6F;
     }
-    
-    &.active {
-      .answer {
-        max-height: 100px !important;
-        padding-bottom: 21px;
-        transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
-      }
-    }
-    .plus-minus-toggle {
-      cursor: pointer;
-      height: 21px;
+  }
+  .plus-minus-toggle {
+    cursor: pointer;
+    height: 21px;
+    position: absolute;
+    width: 21px;
+    right: 4px;
+    top: 50%;
+    z-index: 2;
+
+    &:before,
+    &:after {
+      background: #000;
+      content: "";
+      height: 1px;
+      left: 0;
       position: absolute;
+      top: 0;
       width: 21px;
-      right: 4px;
-      top: 50%;
-      z-index:2;
-  
-      &:before,
-      &:after {
-        background: #000;
-        content: '';
-        height: 1px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 21px;
-        transition: transform 500ms ease, opacity 500ms ease;
-      }
-  
-      &:after {
-        transform-origin: center;
-        opacity: 0;
-      }
+      transition: transform 500ms ease, opacity 500ms ease;
     }
-    
-    &.active {
+
+    &:after {
+      transform-origin: center;
+      opacity: 0;
+    }
+  }
+
+  &.active {
     .plus-minus-toggle {
-        &:after {
-            transform: rotate(90deg);
-            opacity: 1.0;
-          }
-  
-        &:before {
-          transform: rotate(180deg);
-        }
+      &:after {
+        transform: rotate(90deg);
+        opacity: 1;
+      }
+
+      &:before {
+        transform: rotate(180deg);
       }
     }
-    
-    
+  }
 `
 
-
-const QuestionAndAnswer = ({question, answer, onClick, isSelected}) =>
-  (
-    <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : ""}>
-      <div className="question-row">
-        <div
-          style={{ cursor: "pointer" }}
-          onClick={onClick}
-        >
-          <div className="question">
-            {question}
-          </div>
-          <div className="plus-minus-toggle"/>
-        </div>
+const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => (
+  <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : ""}>
+    <div className="question-row">
+      <div style={{ cursor: "pointer" }} onClick={onClick}>
+        <div className="question">{question}</div>
+        <div className="plus-minus-toggle" />
       </div>
-      <div className="answer">
-        {answer}
-      </div>
-    </QuestionAndAnswerStyle>
-  )
+    </div>
+    <div className="answer">{answer}</div>
+  </QuestionAndAnswerStyle>
+)
 
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
@@ -271,8 +268,15 @@ const Questions = () => {
     },
     {
       q: "What is Dai?",
-      a:
-        <span>Dai is a stablecoin pegged to the USD. 1 Dai = $1 USD. Read more at <a href="https://makerdao.com/dai/" target="_blank">here</a>.</span>,
+      a: (
+        <span>
+          Dai is a stablecoin pegged to the USD. 1 Dai = $1 USD. Read more at{" "}
+          <a href="https://makerdao.com/dai/" target="_blank">
+            here
+          </a>
+          .
+        </span>
+      ),
     },
     {
       q: "Do I need an account?",
@@ -281,8 +285,16 @@ const Questions = () => {
     },
     {
       q: "Why are Borrow and Save not yet available?",
-      a:
-        <span>Borrow and Save are features coming with the launch of Multi-Collateral Dai. You can track <a href="https://makerdao.com/roadmap/" target="_blank">Multi-Collateral Dai progress here</a>.</span>,
+      a: (
+        <span>
+          Borrow and Save are features coming with the launch of
+          Multi-Collateral Dai. You can track{" "}
+          <a href="https://makerdao.com/roadmap/" target="_blank">
+            Multi-Collateral Dai progress here
+          </a>
+          .
+        </span>
+      ),
     },
     {
       q: "Is it secure?",
@@ -296,8 +308,15 @@ const Questions = () => {
     },
     {
       q: "I have a question, how can I get in contact with you?",
-      a:
-        <span>You can reach the team by contacting us on <a href="https://chat.makerdao.com" target="_blank">our chat</a>.</span>,
+      a: (
+        <span>
+          You can reach the team by contacting us on{" "}
+          <a href="https://chat.makerdao.com" target="_blank">
+            our chat
+          </a>
+          .
+        </span>
+      ),
     },
     {
       q: "Can I buy Bitcoin or Ethereum with my bank account on Oasis?",
@@ -309,14 +328,21 @@ const Questions = () => {
   return questions.map(({ q, a }, index) => {
     const isSelected = index === selectedIndex
     return (
-      <div style={{
-        maxWidth: "632px",
-        margin: "0 auto",
-        textAlign: "left",
-        fontSize: "18px",
-        lineHeight: "25px",
-      }}>
-        <QuestionAndAnswer question={q} answer={a} onClick={() => setSelectedIndex(isSelected ? null : index)} isSelected={isSelected}/>
+      <div
+        style={{
+          maxWidth: "632px",
+          margin: "0 auto",
+          textAlign: "left",
+          fontSize: "18px",
+          lineHeight: "25px",
+        }}
+      >
+        <QuestionAndAnswer
+          question={q}
+          answer={a}
+          onClick={() => setSelectedIndex(isSelected ? null : index)}
+          isSelected={isSelected}
+        />
         {index < questions.length - 1 ? (
           <div style={{ borderBottom: "1px solid #9E9E9E", opacity: 0.9 }} />
         ) : null}
@@ -344,7 +370,7 @@ const Footer = styled.footer`
     float: right;
     display: flex;
     justify-content: space-between;
-  
+
     a {
       font-size: 17px;
       text-decoration: none;
@@ -352,20 +378,20 @@ const Footer = styled.footer`
       margin-left: 64px;
     }
   }
-  
+
   .copyright {
     text-align: left;
     font-size: 16px;
     letter-spacing: 0.3px;
     white-space: nowrap;
-    
+
     @media (max-width: 640px) {
       padding-top: 60px;
-      text-align: center; 
+      text-align: center;
     }
-    
+
     @media (max-width: ${mobileL}) {
-      font-size: 12px;  
+      font-size: 12px;
     }
   }
 `
@@ -387,52 +413,87 @@ const IndexPage = () => (
     </Header>
     <Hero>Trade, borrow and save using Dai.</Hero>
     <Cards>
-      <Card style={{background: "linear-gradient(180deg, #C2D7E4 0%, #DBF1EC 100%), #7AAAC5"}}>
-        <div className="title" style={{color: "#253A44"}}>Trade</div>
-        <div className="description" style={{color: "#14303A"}}>
-          The most secure way to trade.
-          Wallet to wallet token trading.
+      <Card
+        style={{
+          background:
+            "linear-gradient(180deg, #C2D7E4 0%, #DBF1EC 100%), #7AAAC5",
+        }}
+      >
+        <div className="title" style={{ color: "#253A44" }}>
+          Trade
+        </div>
+        <div className="description" style={{ color: "#14303A" }}>
+          The most secure way to trade. Wallet to wallet token trading.
           Decentralized leverage.
         </div>
         <div className="buttonContainer">
-          <a href="https://oasis.app/trade" className="button" style={{color: "#5894B5", backgroundColor: "white", boxShadow: "0px 2px 2px #C8E4E6"}}>
+          <a
+            href="https://oasis.app/trade"
+            className="button"
+            style={{
+              color: "#5894B5",
+              backgroundColor: "white",
+              boxShadow: "0px 2px 2px #C8E4E6",
+            }}
+          >
             Start Trading
           </a>
         </div>
       </Card>
-      <Card style={{
-        background: "linear-gradient(180deg, #F0DED8 0%, #FDF2E1 100%), linear-gradient(0deg, #EFBF98, #EFBF98)",
-      }}>
-        <div className="title" style={{color: "#5B2E1B"}}>Borrow</div>
-        <div className="description" style={{color: "#5B2E1B"}}>
-          Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
+      <Card
+        style={{
+          background:
+            "linear-gradient(180deg, #F0DED8 0%, #FDF2E1 100%), linear-gradient(0deg, #EFBF98, #EFBF98)",
+        }}
+      >
+        <div className="title" style={{ color: "#5B2E1B" }}>
+          Borrow
+        </div>
+        <div className="description" style={{ color: "#5B2E1B" }}>
+          Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged
+          to the value of 1 USD.
         </div>
         <div className="buttonContainer">
-          <div className="button" style={{color: "#5D2D00", opacity: 0.6}}>Coming Soon</div>
+          <div className="button" style={{ color: "#5D2D00", opacity: 0.6 }}>
+            Coming Soon
+          </div>
         </div>
       </Card>
-      <Card style={{ background: "linear-gradient(180deg, #D5E8E3 0%, #EEF0E4 100%)", marginBottom: 0 }}>
-        <div className="title" style={{color: "#002F28"}}>Save</div>
-        <div className="description" style={{color: "#002F28"}}>
-          Earn savings on your Dai by locking it into a Maker Vault. Automatic and non-custodial.
+      <Card
+        style={{
+          background: "linear-gradient(180deg, #D5E8E3 0%, #EEF0E4 100%)",
+          marginBottom: 0,
+        }}
+      >
+        <div className="title" style={{ color: "#002F28" }}>
+          Save
+        </div>
+        <div className="description" style={{ color: "#002F28" }}>
+          Earn savings on your Dai by locking it into a Maker Vault. Automatic
+          and non-custodial.
         </div>
         <div className="buttonContainer">
-          <div className="button" style={{color: "#002F28", opacity: 0.6}}>Coming Soon</div>
+          <div className="button" style={{ color: "#002F28", opacity: 0.6 }}>
+            Coming Soon
+          </div>
         </div>
       </Card>
     </Cards>
     <TextSection style={{ marginTop: "103px" }}>
       <h3>Supported Tokens</h3>
       <TokenList>
-        {tokens.filter(t => selectedTokens.includes(t.name)).map(({ name, icon }) => (
-          <Token name={name} icon={icon} key={name} />
-        ))}
+        {tokens
+          .filter(t => selectedTokens.includes(t.name))
+          .map(({ name, icon }) => (
+            <Token name={name} icon={icon} key={name} />
+          ))}
       </TokenList>
     </TextSection>
     <TextSection style={{ marginTop: "108px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings — all in one place.
+        Oasis is a platform for decentralized finance. Use it to trade tokens,
+        borrow Dai and earn savings — all in one place.
       </p>
     </TextSection>
     <TextSection>
@@ -446,7 +507,8 @@ const IndexPage = () => (
     <TextSection>
       <h3>Completely Permissionless</h3>
       <p>
-        Anyone can access the system simply by using a wallet address, and you never have to trust a counterparty institution to approve your activity.
+        Anyone can access the system simply by using a wallet address, and you
+        never have to trust a counterparty institution to approve your activity.
       </p>
     </TextSection>
     <TextSection>
@@ -459,7 +521,7 @@ const IndexPage = () => (
         <a href="#">Terms</a>
       </nav>
       <div className="copyright">
-      © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
+        © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
       </div>
     </Footer>
   </div>
