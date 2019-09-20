@@ -169,11 +169,24 @@ const Token = ({ name, icon }) => {
 
 const QuestionAndAnswerStyle = styled.div`
     position: relative;
-
+    
+    .question-row {
+      padding-top: 14px;
+      padding-bottom: 18px;
+      letter-spacing: 0.007em;
+      position: relative;
+    }
+    
+    .question {
+      margin-right: 25px;
+    }
+    
     .answer {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
+      font-size: 17px;
+      color: #6F6F6F;
     }
     
     &.active {
@@ -227,43 +240,25 @@ const QuestionAndAnswerStyle = styled.div`
 `
 
 
-const QuestionAndAnswer = ({question, answer, onClick, isSelected}) => {
-
-  return (
-    <div key={question}>
-      <div
-        style={{
-          paddingTop: "14px",
-          paddingBottom: "18px",
-          letterSpacing: "0.007em",
-          position: "relative",
-        }}
-      >
-        <QuestionWrapper
+const QuestionAndAnswer = ({question, answer, onClick, isSelected}) =>
+  (
+    <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : ""}>
+      <div className="question-row">
+        <div
           style={{ cursor: "pointer" }}
           onClick={onClick}
-          className={isSelected ? "" : "collapsed" }
         >
-          <div style={{marginRight: "25px"}}>
+          <div className="question">
             {question}
           </div>
-          <div className={`plus-minus-toggle`} />
-        </QuestionWrapper>
-      </div>
-      {isSelected ? (
-        <div
-          style={{
-            fontSize: "17px",
-            paddingBottom: "21px",
-            color: "#6F6F6F",
-          }}
-        >
-          {answer}
+          <div className="plus-minus-toggle"/>
         </div>
-      ) : null}
-    </div>
+      </div>
+      <div className="answer">
+        {answer}
+      </div>
+    </QuestionAndAnswerStyle>
   )
-}
 
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
