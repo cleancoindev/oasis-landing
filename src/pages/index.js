@@ -400,7 +400,7 @@ const Footer = styled.footer`
     }
 
     @media (max-width: ${mobileL}) {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 `
