@@ -246,7 +246,10 @@ const QuestionAndAnswerStyle = styled.div`
 `
 
 const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => (
-  <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : "collapsed"}>
+  <QuestionAndAnswerStyle
+    key={question}
+    className={isSelected ? "active" : "collapsed"}
+  >
     <div className="question-row">
       <div style={{ cursor: "pointer" }} onClick={onClick}>
         <div className="question">{question}</div>
@@ -325,30 +328,36 @@ const Questions = () => {
     },
   ]
 
-  return questions.map(({ q, a }, index) => {
-    const isSelected = index === selectedIndex
-    return (
-      <div
-        style={{
-          maxWidth: "632px",
-          margin: "0 auto",
-          textAlign: "left",
-          fontSize: "18px",
-          lineHeight: "25px",
-        }}
-      >
-        <QuestionAndAnswer
-          question={q}
-          answer={a}
-          onClick={() => setSelectedIndex(isSelected ? null : index)}
-          isSelected={isSelected}
-        />
-        {index < questions.length - 1 ? (
-          <div style={{ borderBottom: "1px solid #9E9E9E", opacity: 0.9 }} />
-        ) : null}
-      </div>
-    )
-  })
+  return (
+    <div
+      style={{
+        maxWidth: "632px",
+        margin: "0 auto",
+        textAlign: "left",
+        fontSize: "18px",
+        lineHeight: "25px",
+      }}
+    >
+      {questions.map(({ q, a }, index) => {
+        const isSelected = index === selectedIndex
+        return (
+          <div>
+            <QuestionAndAnswer
+              question={q}
+              answer={a}
+              onClick={() => setSelectedIndex(isSelected ? null : index)}
+              isSelected={isSelected}
+            />
+            {index < questions.length - 1 ? (
+              <div
+                style={{ borderBottom: "1px solid #9E9E9E", opacity: 0.9 }}
+              />
+            ) : null}
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 const Header = styled.header`
