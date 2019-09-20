@@ -203,11 +203,12 @@ const QuestionWrapper = styled.div`
       position: absolute;
       top: 0;
       width: 21px;
-      transition: transform 500ms ease;
+      transition: transform 500ms ease, opacity 500ms ease;
     }
 
     &:after {
       transform-origin: center;
+      opacity: 0;
     }
   }
   
@@ -215,6 +216,7 @@ const QuestionWrapper = styled.div`
     .plus-minus-toggle {
       &:after {
           transform: rotate(90deg);
+          opacity: 1.0;
         }
 
       &:before {
