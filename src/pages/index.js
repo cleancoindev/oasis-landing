@@ -231,7 +231,7 @@ const QuestionAndAnswerStyle = styled.div`
     }
   }
 
-  &.active {
+  &.collapsed {
     .plus-minus-toggle {
       &:after {
         transform: rotate(90deg);
@@ -246,7 +246,7 @@ const QuestionAndAnswerStyle = styled.div`
 `
 
 const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => (
-  <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : ""}>
+  <QuestionAndAnswerStyle key={question} className={isSelected ? "active" : "collapsed"}>
     <div className="question-row">
       <div style={{ cursor: "pointer" }} onClick={onClick}>
         <div className="question">{question}</div>
