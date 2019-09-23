@@ -2,7 +2,7 @@
 
 Upcoming landing page for Oasis.
 
-[oasis-landing-ferni.mkr-js-prod.now.sh](https://oasis-landing-ferni.mkr-js-prod.now.sh/)
+[oasis-landing-staging.now.sh](https://oasis-landing-staging.now.sh/)
 
 ## Development
 
