@@ -10,5 +10,6 @@
   ],
   "github": {
     "enabled": false
-  }
+  },
+  "alias": "oasis-landing-staging.now.sh"
 }
