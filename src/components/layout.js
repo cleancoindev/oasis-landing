@@ -16,7 +16,7 @@ const Header = styled.header`
 
 const Footer = styled.footer`
   margin-top: 90px;
-  margin-bottom: 108px;
+  margin-bottom: 70px;
 
   nav {
     float: right;

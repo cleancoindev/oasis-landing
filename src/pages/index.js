@@ -99,7 +99,7 @@ const TextSection = styled.div`
   p {
     max-width: 580px;
     margin: 0 auto;
-    font-size: 19px;
+    font-size: 20px;
     line-height: 28px;
   }
 `
@@ -161,7 +161,7 @@ const Token = ({ name, icon }) => {
       <Icon width="22" height="22" style={{ flexGrow: 0, flexShrink: 0 }} />
       <span
         style={{
-          fontSize: "15px",
+          fontSize: "17px",
           lineHeight: "22px",
           marginLeft: "13px",
           flexGrow: 0,
@@ -192,8 +192,8 @@ const QuestionAndAnswerStyle = styled.div`
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
-    font-size: 17px;
-    color: #6f6f6f;
+    font-size: 18px;
+    color: #4A4A4A;
   }
 
   &.active {
@@ -330,7 +330,7 @@ const Questions = () => {
   return (
     <div
       style={{
-        maxWidth: "632px",
+        maxWidth: "700px",
         margin: "0 auto",
         textAlign: "left",
         fontSize: "18px",
