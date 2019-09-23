@@ -38,15 +38,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["FT Switch"],
-          urls: ["/fonts/fonts.css"],
-        },
-      },
-    },
     "gatsby-plugin-styled-components",
   ],
 }

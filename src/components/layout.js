@@ -55,7 +55,10 @@ const Layout = ({children}) => (
     paddingTop: "41px",
   }}>
     <Helmet>
-      <link rel="preload" href="/fonts/fonts.css" as="style" />
+      <link rel="preload" as="font" href="/fonts/FTSwitch-Regular.woff2" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" as="font" href="/fonts/FTSwitch-Regular.woff" type="font/woff" crossOrigin="anonymous" />
+      <link rel="preload" as="font" href="/fonts/FTSwitch-Medium.woff2" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" as="font" href="/fonts/FTSwitch-Medium.woff" type="font/woff" crossOrigin="anonymous" />
     </Helmet>
     <Header>
       <span>Oasis</span>
