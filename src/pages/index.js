@@ -5,8 +5,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import "../styles/minireset.css"
-import "./index.css"
 
 import BatIcon from "../images/icons/bat.svg"
 import ZrxIcon from "../images/icons/zrx.svg"

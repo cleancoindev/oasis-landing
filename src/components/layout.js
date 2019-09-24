@@ -3,6 +3,9 @@ import styled from "styled-components"
 import { mobileL } from "../util/screen-sizes"
 import { Helmet } from "react-helmet"
 
+import "../styles/minireset.css"
+import "./layout.css"
+
 const Header = styled.header`
   text-align: left;
 
