@@ -19,8 +19,6 @@ import UsdcIcon from "../images/icons/usdc.svg"
 import WbtcIcon from "../images/icons/wbtc.svg"
 import EmptyIcon from "../images/icons/empty.svg"
 
-import { Helmet } from "react-helmet"
-
 const Hero = styled.div`
   color: #1e2e3a;
   font-size: 38px;
@@ -81,9 +79,15 @@ const Card = styled.div`
     line-height: 38px;
     text-decoration: none;
   }
+  
+  .button.enabled {
+     box-shadow: 0 2px 2px #C8E4E6;
+     transition: all .15s ease;
+  }
 
-  a:hover {
-    opacity: 0.85;
+  .button.enabled:hover {
+    box-shadow: 0 5px 5px #C8E4E6;
+    transform: translateY(-1px);
   }
 `
 
@@ -381,11 +385,10 @@ const IndexPage = () => (
         <div className="buttonContainer">
           <a
             href="https://oasis.app/trade"
-            className="button"
+            className="button enabled"
             style={{
               color: "#5894B5",
               backgroundColor: "white",
-              boxShadow: "0px 2px 2px #C8E4E6",
             }}
           >
             Start Trading
