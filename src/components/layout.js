@@ -17,6 +17,8 @@ const Header = styled.header`
   }
 `
 
+const centerFooterMaxWidth = "640px";
+
 const Footer = styled.footer`
   margin-top: 90px;
   margin-bottom: 70px;
@@ -24,12 +26,19 @@ const Footer = styled.footer`
   nav {
     float: right;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    
+    @media (max-width: ${centerFooterMaxWidth}) {
+      float: none;
+    }
+    
     a {
       font-size: 17px;
       text-decoration: none;
       color: black;
+    }
+    
+    a:not(:first-child) {
       margin-left: 64px;
     }
   }
@@ -40,7 +49,7 @@ const Footer = styled.footer`
     letter-spacing: 0.3px;
     white-space: nowrap;
 
-    @media (max-width: 640px) {
+    @media (max-width: ${centerFooterMaxWidth}) {
       padding-top: 60px;
       text-align: center;
     }
