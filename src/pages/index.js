@@ -377,8 +377,7 @@ const IndexPage = () => (
           Trade
         </div>
         <div className="description" style={{ color: "#14303A" }}>
-          The most secure way to trade. Wallet to wallet token trading.
-          Decentralized leverage.
+          Wallet to wallet token trading. Place orders on the Exchange, or simply Swap your tokens instantly for the market price.
         </div>
         <div className="buttonContainer">
           <a
@@ -403,8 +402,7 @@ const IndexPage = () => (
           Borrow
         </div>
         <div className="description" style={{ color: "#5B2E1B" }}>
-          Lock your tokens to borrow Dai, a decentralized cryptocurrency pegged
-          to the value of 1 USD.
+          Lock your tokens in the Maker Vault to generate Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#5D2D00", opacity: 0.6 }}>
@@ -422,8 +420,7 @@ const IndexPage = () => (
           Save
         </div>
         <div className="description" style={{ color: "#002F28" }}>
-          Earn savings on your Dai by locking it into a Maker Vault. Automatic
-          and non-custodial.
+          Start earning savings on your Dai by locking it into the Maker Vault. Automatic, non-custodial savings.
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#002F28", opacity: 0.6 }}>
