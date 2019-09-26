@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { mobileL } from "../util/screen-sizes"
 import { Helmet } from "react-helmet"
+import { Link } from "gatsby"
 
 import "../styles/minireset.css"
 import "./layout.css"
@@ -11,7 +12,7 @@ import CookieNotice from "./cookieNotice"
 const Header = styled.header`
   text-align: left;
 
-  span {
+  .logo {
     font-size: 21px;
     line-height: 25px;
     letter-spacing: 0.3px;
@@ -75,14 +76,14 @@ const Layout = ({children}) => (
       <link rel="preload" as="font" href="/fonts/FTSwitch-Medium.woff" type="font/woff" crossOrigin="anonymous" />
     </Helmet>
     <Header>
-      <span>Oasis</span>
+      <Link className="logo" to="/">Oasis</Link>
     </Header>
     {children}
     <CookieNotice/>
     <Footer>
       <nav>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+        <Link to="/privacy">Privacy</Link>
+        <Link to="/terms">Terms</Link>
       </nav>
       <div className="copyright">
         © {new Date().getFullYear()} Maker Ecosystem Growth Holdings, Inc.
