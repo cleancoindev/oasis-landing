@@ -13,3 +13,9 @@ Start the development server:
 Build:
 
 `yarn build`
+
+Update the staging website:
+
+`now --prod`
+
+(You can install "now" with `yarn global add now`)
