@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet"
 import "../styles/minireset.css"
 import "./layout.css"
 
+import CookieNotice from "./cookieNotice"
+
 const Header = styled.header`
   text-align: left;
 
@@ -76,6 +78,7 @@ const Layout = ({children}) => (
       <span>Oasis</span>
     </Header>
     {children}
+    <CookieNotice/>
     <Footer>
       <nav>
         <a href="#">Privacy</a>

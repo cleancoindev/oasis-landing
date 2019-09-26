@@ -6,16 +6,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-import BatIcon from "../images/icons/bat.svg"
-import ZrxIcon from "../images/icons/zrx.svg"
-import DgdIcon from "../images/icons/dgd.svg"
-import EthIcon from "../images/icons/eth.svg"
-import MkrIcon from "../images/icons/mkr.svg"
-import OmgIcon from "../images/icons/omg.svg"
-import RepIcon from "../images/icons/rep.svg"
-import UsdcIcon from "../images/icons/usdc.svg"
-import WbtcIcon from "../images/icons/wbtc.svg"
-import EmptyIcon from "../images/icons/empty.svg"
+import BatIcon from "../images/tokens/bat.svg"
+import ZrxIcon from "../images/tokens/zrx.svg"
+import DgdIcon from "../images/tokens/dgd.svg"
+import EthIcon from "../images/tokens/eth.svg"
+import MkrIcon from "../images/tokens/mkr.svg"
+import OmgIcon from "../images/tokens/omg.svg"
+import RepIcon from "../images/tokens/rep.svg"
+import UsdcIcon from "../images/tokens/usdc.svg"
+import WbtcIcon from "../images/tokens/wbtc.svg"
+import EmptyIcon from "../images/tokens/empty.svg"
 
 const Hero = styled.div`
   color: #1e2e3a;
