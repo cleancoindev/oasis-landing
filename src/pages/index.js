@@ -275,7 +275,7 @@ const Questions = () => {
       a: (
         <span>
           Dai is a stablecoin pegged to the USD. 1 Dai = $1 USD. Read more at{" "}
-          <a href="https://makerdao.com/dai/" target="_blank">
+          <a href="https://makerdao.com/dai/" target="_blank" rel="noopener noreferrer">
             here
           </a>
           .
@@ -293,7 +293,7 @@ const Questions = () => {
         <span>
           Borrow and Save are features coming with the launch of
           Multi-Collateral Dai. You can track{" "}
-          <a href="https://makerdao.com/roadmap/" target="_blank">
+          <a href="https://makerdao.com/roadmap/" target="_blank" rel="noopener noreferrer">
             Multi-Collateral Dai progress here
           </a>
           .
@@ -315,7 +315,7 @@ const Questions = () => {
       a: (
         <span>
           You can reach the team by contacting us on{" "}
-          <a href="https://chat.makerdao.com" target="_blank">
+          <a href="https://chat.makerdao.com" target="_blank" rel="noopener noreferrer">
             our chat
           </a>
           .
