@@ -200,7 +200,7 @@ const QuestionAndAnswerStyle = styled.div`
 
   &.active {
     .answer {
-      max-height: 150px !important;
+      max-height: 175px !important;
       padding-bottom: 21px;
       transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
     }
@@ -274,7 +274,7 @@ const Questions = () => {
       q: "What is Dai?",
       a: (
         <span>
-          Dai is a stablecoin pegged to the USD. 1 Dai = $1 USD. Read more at{" "}
+          Dai is a stablecoin soft pegged to the US Dollar. It aims to be 1 Dai = $1 USD but this can vary slightly. Read more{" "}
           <a href="https://makerdao.com/dai/" target="_blank" rel="noopener noreferrer">
             here
           </a>
@@ -285,7 +285,7 @@ const Questions = () => {
     {
       q: "Do I need an account?",
       a:
-        "You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum wallets such as Metamask, Coinbase Wallet, Ledger.",
+        "You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as Metamask, Coinbase Wallet, etc.",
     },
     {
       q: "Why are Borrow and Save not yet available?",
@@ -308,7 +308,12 @@ const Questions = () => {
     {
       q: "Are there fees?",
       a:
-        "Oasis does not charge any fees, although you will have to pay gas costs for each transaction you make.",
+        <span>
+          Oasis does not charge any fees, although you will have to pay{" "}
+          <a href="https://kb.myetherwallet.com/en/transactions/what-is-gas/" target="_blank" rel="noopener noreferrer">
+            gas
+          </a>{" "}and other fees associated with the Maker Protocol.
+        </span>,
     },
     {
       q: "I have a question, how can I get in contact with you?",
@@ -325,7 +330,7 @@ const Questions = () => {
     {
       q: "Can I buy Bitcoin or Ethereum with my bank account on Oasis?",
       a:
-        "You cannot buy crypto from your bank account using Oasis. Instead you can use Dai, to buy Ethereum and other supported tokens. ",
+        "You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai, to buy Ethereum and other supported tokens. ",
     },
   ]
 
@@ -377,7 +382,7 @@ const IndexPage = () => (
           Trade
         </div>
         <div className="description" style={{ color: "#14303A" }}>
-          Wallet to wallet token trading. Place orders on the Exchange, or simply Swap your tokens instantly for the market price.
+          Wallet to wallet token trading. Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.
         </div>
         <div className="buttonContainer">
           <a
