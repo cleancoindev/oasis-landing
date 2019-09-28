@@ -181,6 +181,9 @@ const Token = ({ name, icon }) => {
   )
 }
 
+const answerPaddingBottom = 21
+const answerAnimationTime = '350ms'
+
 const QuestionAndAnswerStyle = styled.div`
   position: relative;
 
@@ -197,15 +200,14 @@ const QuestionAndAnswerStyle = styled.div`
 
   .answer {
     overflow: hidden;
-    transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
+    transition: max-height ${answerAnimationTime} ease, padding-bottom ${answerAnimationTime} ease;
     font-size: 18px;
     color: #4A4A4A;
   }
 
   &.active {
     .answer {
-      padding-bottom: 21px;
-      transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
+      padding-bottom: ${answerPaddingBottom}px;
     }
   }
   .plus-minus-toggle {
@@ -226,7 +228,7 @@ const QuestionAndAnswerStyle = styled.div`
       position: absolute;
       top: 0;
       width: 21px;
-      transition: transform 500ms ease, opacity 500ms ease;
+      transition: transform ${answerAnimationTime} ease, opacity ${answerAnimationTime} ease;
     }
 
     &:after {
@@ -287,7 +289,7 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
           <div className="plus-minus-toggle"/>
         </div>
       </div>
-      <div className="answer" style={{maxHeight: isSelected ? (height + 21) : 0}}>
+      <div className="answer" style={{maxHeight: isSelected ? (height + answerPaddingBottom) : 0}}>
         <div ref={answerElement}>{answer}</div>
       </div>
     </QuestionAndAnswerStyle>
