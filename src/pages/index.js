@@ -10,6 +10,7 @@ import BatIcon from "../images/tokens/bat.svg"
 import ZrxIcon from "../images/tokens/zrx.svg"
 import DgdIcon from "../images/tokens/dgd.svg"
 import EthIcon from "../images/tokens/eth.svg"
+import DaiIcon from "../images/tokens/dai.svg"
 import MkrIcon from "../images/tokens/mkr.svg"
 import OmgIcon from "../images/tokens/omg.svg"
 import RepIcon from "../images/tokens/rep.svg"
@@ -108,6 +109,10 @@ const TextSection = styled.div`
 
 const tokens = [
   {
+    name: "Dai",
+    icon: DaiIcon,
+  },
+  {
     name: "Ethereum",
     icon: EthIcon,
   },
@@ -141,7 +146,7 @@ const tokens = [
   },
 ]
 
-const selectedTokens = ["Ethereum", "0x", "Basic Attention Token"]
+const selectedTokens = ["Dai", "Augur", "Ethereum", "0x", "Basic Attention Token"]
 
 const TokenList = styled.div`
   max-width: 978px;
