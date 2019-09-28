@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 
 import styled from "styled-components"
 
@@ -196,7 +196,6 @@ const QuestionAndAnswerStyle = styled.div`
   }
 
   .answer {
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
     font-size: 18px;
@@ -205,7 +204,6 @@ const QuestionAndAnswerStyle = styled.div`
 
   &.active {
     .answer {
-      max-height: 175px !important;
       padding-bottom: 21px;
       transition: max-height 0.2s ease-in, padding-bottom 0.2s ease-in;
     }
@@ -250,21 +248,51 @@ const QuestionAndAnswerStyle = styled.div`
     }
   }
 `
+function debounce(fn, ms) {
+  let timer;
+  return _ => {
+    clearTimeout(timer);
+    timer = setTimeout(_ => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
+  };
+}
 
-const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => (
-  <QuestionAndAnswerStyle
-    key={question}
-    className={isSelected ? "active" : "collapsed"}
-  >
-    <div className="question-row">
-      <div style={{ cursor: "pointer" }} onClick={onClick}>
-        <div className="question">{question}</div>
-        <div className="plus-minus-toggle" />
+const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
+  const answerElement = useRef(null);
+  const [height, setHeight] = React.useState(0);
+  React.useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setHeight(answerElement.current ? answerElement.current.clientHeight : 0);
+    }, 300);
+
+    window.addEventListener("resize", debouncedHandleResize);
+    if (answerElement.current && height === 0) {
+      setHeight(answerElement.current.clientHeight)
+    }
+    return _ => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  });
+  return (
+
+    <QuestionAndAnswerStyle
+      key={question}
+      className={isSelected ? "active" : "collapsed"}
+    >
+      <div className="question-row">
+        <div style={{ cursor: "pointer" }} onClick={onClick}>
+          <div className="question">{question}</div>
+          <div className="plus-minus-toggle"/>
+        </div>
       </div>
-    </div>
-    <div className="answer">{answer}</div>
-  </QuestionAndAnswerStyle>
-)
+      <div className="answer" style={{maxHeight: isSelected ? (height + 21) : 0}}>
+        <div ref={answerElement}>{answer}</div>
+      </div>
+    </QuestionAndAnswerStyle>
+  )
+}
 
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
