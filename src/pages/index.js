@@ -262,23 +262,23 @@ function debounce(fn, ms) {
 }
 
 const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
-  const answerElement = useRef(null);
-  const [height, setHeight] = React.useState(0);
+  const answerElement = useRef(null)
+  const [height, setHeight] = React.useState(0)
   React.useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
-      setHeight(answerElement.current ? answerElement.current.clientHeight : 0);
+      setHeight(answerElement.current ? answerElement.current.clientHeight : 0)
     }, 300);
 
-    window.addEventListener("resize", debouncedHandleResize);
+    window.addEventListener("resize", debouncedHandleResize)
     if (answerElement.current && height === 0) {
       setHeight(answerElement.current.clientHeight)
     }
     return _ => {
-      window.removeEventListener("resize", debouncedHandleResize);
-    };
-  });
-  return (
+      window.removeEventListener("resize", debouncedHandleResize)
+    }
+  })
 
+  return (
     <QuestionAndAnswerStyle
       key={question}
       className={isSelected ? "active" : "collapsed"}
@@ -382,7 +382,7 @@ const Questions = () => {
       {questions.map(({ q, a }, index) => {
         const isSelected = index === selectedIndex
         return (
-          <div>
+          <div key={q}>
             <QuestionAndAnswer
               question={q}
               answer={a}
