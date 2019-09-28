@@ -46,7 +46,7 @@ const CookieNotice = () => {
     if (!acceptedDate) {
       setShow(true)
     }
-  })
+  }, [])
 
   const handleClose = () => {
     Cookies.set(OASIS_APP_PRIVACY_ACCEPTED_DATE, new Date().toISOString(), {

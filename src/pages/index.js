@@ -276,7 +276,7 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
     return _ => {
       window.removeEventListener("resize", debouncedHandleResize)
     }
-  })
+  }, [height])
 
   return (
     <QuestionAndAnswerStyle
