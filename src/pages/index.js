@@ -103,7 +103,7 @@ const TextSection = styled.div`
     max-width: 580px;
     margin: 0 auto;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 29px;
   }
 `
 
@@ -202,7 +202,11 @@ const QuestionAndAnswerStyle = styled.div`
     overflow: hidden;
     transition: max-height ${answerAnimationTime} ease, padding-bottom ${answerAnimationTime} ease;
     font-size: 18px;
-    color: #4A4A4A;
+    line-height: 29px;
+    
+    a {
+      text-decoration: underline;
+    }
   }
 
   &.active {
