@@ -52,6 +52,10 @@ const TextPage = styled.div`
   a {
     text-decoration: underline;
   }
+  
+  strong {
+    font-weight: 500;
+  }
 `
 
 export default TextPage

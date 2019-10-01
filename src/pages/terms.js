@@ -11,14 +11,14 @@ const Privacy = () => (
       <h1>Terms of Service</h1>
       <span className="subheading">Last Revised: 02 October 2019</span>
 
-      <p>Please read these Terms of Service (this “Agreement”) carefully. Your use or access of the Site or the Services
+      <p>Please read these Terms of Service (this “<strong>Agreement</strong>”) carefully. Your use or access of the Site or the Services
         (as defined below) constitutes your consent to this Agreement.
       </p>
       <p>
-      This Agreement is between you (the “User” and collectively with others using the Site, “Users”)
+      This Agreement is between you (the “<strong>User</strong>” and collectively with others using the Site, “<strong>Users</strong>”)
       and Maker Ecosystem Growth Holdings, Inc., a company organized under the laws of Cayman
-      Islands (“Company” or “we,” “our” or “us” and together with you, the “Parties”) concerning
-      your use of (including any access to) Company’s websites, currently located at oasis.app, mobile applications, web applications, decentralized applications, smart contracts and API located at any of Company’s websites (together with any materials and services available therein, and successor website(s) or application(s) thereto, the “Site”). This Agreement hereby incorporates by this reference any additional terms and conditions with respect to the Site posted by Company to the Site, or otherwise made available to you by Company.
+      Islands (“<strong>Company</strong>” or “we,” “our” or “us” and together with you, the “Parties”) concerning
+      your use of (including any access to) Company’s websites, currently located at oasis.app, mobile applications, web applications, decentralized applications, smart contracts and API located at any of Company’s websites (together with any materials and services available therein, and successor website(s) or application(s) thereto, the “<strong>Site</strong>”). This Agreement hereby incorporates by this reference any additional terms and conditions with respect to the Site posted by Company to the Site, or otherwise made available to you by Company.
       </p>
       <p>
       By clicking or tapping any button or box marked “accept” or “agree” (or a similar term) in connection with this Agreement, or by accessing or using the Site or the Services (as defined below), you agree to be bound by this Agreement, a current version of which is available at the Site, and which may be modified from time to time at our sole discretion in accordance with section 3 below.
@@ -31,8 +31,8 @@ const Privacy = () => (
       <p>
       The Company has developed Oasis – an online, decentralized and autonomous environment
       that displays price information and autonomous smart contract mechanisms of digital tokens
-      and assets (“Digital Assets”) and provides the user-interface that guides your access to Oasis
-      (the “Services”).
+      and assets (“<strong>Digital Assets</strong>”) and provides the user-interface that guides your access to Oasis
+      (the “<strong>Services</strong>”).
       </p>
       <p>
       You affirm that you are aware and acknowledge that Company is a non-profit entity and non-custodial provider of software services, meaning that the Company does not custody, control or manage user funds in any manner whatsoever.  The Services are deployed in a decentralized environment wherein the Services can be autonomously and directly accessed by the Users without any involvement or actions taken by Company or any third-party.
@@ -97,7 +97,7 @@ const Privacy = () => (
       </p>
       <p>
       Services are available for your business use only. You are not allowed to enter into this
-      Agreement and use the Services in your capacity as a consumer. If you are an individual accessing or using the Site on behalf of, or for the benefit of, any corporation, partnership or other entity with which you are associated (an “Organization”), then you are agreeing to this Agreement on behalf of yourself and such Organization, and you represent and warrant that you have the legal authority to bind such Organization to this Agreement. References to “you” and “your” in this Agreement will refer to both the individual using the Site and to any such Organization.
+      Agreement and use the Services in your capacity as a consumer. If you are an individual accessing or using the Site on behalf of, or for the benefit of, any corporation, partnership or other entity with which you are associated (an “<strong>Organization</strong>”), then you are agreeing to this Agreement on behalf of yourself and such Organization, and you represent and warrant that you have the legal authority to bind such Organization to this Agreement. References to “you” and “your” in this Agreement will refer to both the individual using the Site and to any such Organization.
       </p>
       <p>
       You represent that you are legally permitted to use the service in your jurisdiction including
