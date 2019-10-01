@@ -43,7 +43,15 @@ const TextPage = styled.div`
   
   ul {
     list-style: disc;
-    margin-left: 40px;
+    margin-left: 45px;
+  }
+  
+  ul ul {
+    list-style: circle;
+  }
+  
+  a {
+    text-decoration: underline;
   }
 `
 
@@ -325,8 +333,8 @@ const Privacy = () => (
 
       <h2>7. Open Source and Proprietary Rights</h2>
       <p>Some software used in our Services may be offered under an open source license that we will make available to
-        you. Documentation of open source code is available on the Maker Github page. This documentation, including any
-        code shown in it, is licensed under the GNU Affero General Public License version 3 and you agree to abide by
+        you. Documentation of open source code is available on the <a href="https://github.com/makerdao" target="_blank" rel="noopener noreferrer">Maker Github</a> page. This documentation, including any
+        code shown in it, is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU Affero General Public License version 3</a> and you agree to abide by
         the terms of this license.
       </p>
       <p>
@@ -542,7 +550,7 @@ const Privacy = () => (
 
       <h3>13.6 Communications</h3>
       <p>Users with questions, complaints or claims with respect to the Services may contact us using the relevant
-        contact information set forth above and at legal@oasis.app.
+        contact information set forth above and at <a href="mailto:legal@oasis.app">legal@oasis.app</a>.
       </p>
     </TextPage>
   </Layout>
