@@ -17,7 +17,7 @@ const Privacy = () => (
       <p>
       This Agreement is between you (the “User” and collectively with others using the Site, “Users”)
       and Maker Ecosystem Growth Holdings, Inc., a company organized under the laws of Cayman
-      Islands (“Company” or “ we,” “ our” or “ us” and together with you, the “ Parties”) concerning
+      Islands (“Company” or “we,” “our” or “us” and together with you, the “Parties”) concerning
       your use of (including any access to) Company’s websites, currently located at oasis.app, mobile applications, web applications, decentralized applications, smart contracts and API located at any of Company’s websites (together with any materials and services available therein, and successor website(s) or application(s) thereto, the “Site”). This Agreement hereby incorporates by this reference any additional terms and conditions with respect to the Site posted by Company to the Site, or otherwise made available to you by Company.
       </p>
       <p>
@@ -41,51 +41,49 @@ const Privacy = () => (
       <p>
       You represent and warrant to Company that:
       </p>
-      <p>
-        <ul>
-          <li>You are eligible to enter into the Agreement and use the Services in accordance with section 2 below.</li>
-          <li>This Agreement is valid, and binding on you, and enforceable against you.</li>
-          <li>You will comply with all terms and conditions of this Agreement.</li>
-          <li>You are not entering into the Agreement and using the Services in your capacity as a consumer.</li>
-          <li>You acknowledge and agree that from time to time the Site may be inaccessible or inoperable for any reason,
-            including, without limitation: (i) equipment malfunctions; (ii) periodic maintenance procedures or repairs
-            which Company may undertake from time to time; (iii) causes beyond the control of Company or which are not
-            reasonably foreseeable by Company; (iv) disruptions and temporary or permanent unavailability of the
-            underlying blockchain infrastructure; (v) unavailability of third party service providers or external
-            partners for any reason. In this case, you may be prevented from accessing or using the Services.</li>
-          <li>You acknowledge and agree that the Site and the Services may evolve over time. This means Company may apply
-            changes, replace, or discontinue (temporarily or permanently) the Services at any time in Company’s sole
-            discretion.</li>
-          <li>You acknowledge and agree that the pricing information provided on the Site does not represent an offer, a
-            solicitation of an offer, or any advice regarding, or recommendation to enter into, a transaction with
-            Company.</li>
-          <li>You acknowledge and agree that the Company does not act as an agent for any of the Users.</li>
-          <li>You are solely responsible for your use of the Services, including all transfers of Digital Assets you
-            make.</li>
-          <li>In connection with using the Services, you will only transfer legally-obtained Digital Assets that belong
-            to you.</li>
-          <li>You will obey all applicable laws in connection with using the Services. You will not use the Site or the
-            Services if the laws of your country, or any other applicable law, prohibit you from doing so in accordance
-            with this Agreement.</li>
-          <li>You are solely responsible for reporting and paying any taxes applicable to your use of the Services.</li>
-          <li>You are not and have not been placed on any excluded or denied persons lists by any authority.</li>
-          <li>You are responsible for complying with any applicable export controls or embargoes.</li>
-          <li>Any Digital Assets used by you in connection with the Services are either owned by you or that you are
-            validly authorized to carry out actions using such Digital Assets.</li>
-          <li>You acknowledge and agree that we have no control over, or liability for, the delivery,
-            quality, safety, legality or any other aspect of any Digital Assets that you may transfer to or from a third
-            party, and that we are not responsible for ensuring that an entity with whom you transact actually completes
-            the transaction or is authorized to do so. If you
-            experience a problem with any Digital Assets purchased from or sold to a third party
-            through the Services, you bear the entire risk.
-          </li>
-          <li>You covenant that all activity and conduct in connection with your use of the Services, including any
-            resultant transactions of the Digital Assets, will be in compliance with all applicable law, rules,
-            regulations, requirements, guidelines and policies of any
-            governmental or quasi-governmental body or regulatory agency, any self-regulatory organization.
-          </li>
-        </ul>
-      </p>
+      <ul>
+        <li>You are eligible to enter into the Agreement and use the Services in accordance with section 2 below.</li>
+        <li>This Agreement is valid, and binding on you, and enforceable against you.</li>
+        <li>You will comply with all terms and conditions of this Agreement.</li>
+        <li>You are not entering into the Agreement and using the Services in your capacity as a consumer.</li>
+        <li>You acknowledge and agree that from time to time the Site may be inaccessible or inoperable for any reason,
+          including, without limitation: (i) equipment malfunctions; (ii) periodic maintenance procedures or repairs
+          which Company may undertake from time to time; (iii) causes beyond the control of Company or which are not
+          reasonably foreseeable by Company; (iv) disruptions and temporary or permanent unavailability of the
+          underlying blockchain infrastructure; (v) unavailability of third party service providers or external
+          partners for any reason. In this case, you may be prevented from accessing or using the Services.</li>
+        <li>You acknowledge and agree that the Site and the Services may evolve over time. This means Company may apply
+          changes, replace, or discontinue (temporarily or permanently) the Services at any time in Company’s sole
+          discretion.</li>
+        <li>You acknowledge and agree that the pricing information provided on the Site does not represent an offer, a
+          solicitation of an offer, or any advice regarding, or recommendation to enter into, a transaction with
+          Company.</li>
+        <li>You acknowledge and agree that the Company does not act as an agent for any of the Users.</li>
+        <li>You are solely responsible for your use of the Services, including all transfers of Digital Assets you
+          make.</li>
+        <li>In connection with using the Services, you will only transfer legally-obtained Digital Assets that belong
+          to you.</li>
+        <li>You will obey all applicable laws in connection with using the Services. You will not use the Site or the
+          Services if the laws of your country, or any other applicable law, prohibit you from doing so in accordance
+          with this Agreement.</li>
+        <li>You are solely responsible for reporting and paying any taxes applicable to your use of the Services.</li>
+        <li>You are not and have not been placed on any excluded or denied persons lists by any authority.</li>
+        <li>You are responsible for complying with any applicable export controls or embargoes.</li>
+        <li>Any Digital Assets used by you in connection with the Services are either owned by you or that you are
+          validly authorized to carry out actions using such Digital Assets.</li>
+        <li>You acknowledge and agree that we have no control over, or liability for, the delivery,
+          quality, safety, legality or any other aspect of any Digital Assets that you may transfer to or from a third
+          party, and that we are not responsible for ensuring that an entity with whom you transact actually completes
+          the transaction or is authorized to do so. If you
+          experience a problem with any Digital Assets purchased from or sold to a third party
+          through the Services, you bear the entire risk.
+        </li>
+        <li>You covenant that all activity and conduct in connection with your use of the Services, including any
+          resultant transactions of the Digital Assets, will be in compliance with all applicable law, rules,
+          regulations, requirements, guidelines and policies of any
+          governmental or quasi-governmental body or regulatory agency, any self-regulatory organization.
+        </li>
+      </ul>
       <h3>1.3. Fees</h3>
       <p>
       Company does not charge any fees for use of Services. However, in connection with your use of the Services, you agree to bear all costs necessary to conduct a transaction, such as gas cost. We attempt to provide accurate costs information, but this information is highly volatile and can change quickly without Users necessarily being aware of these changes.
@@ -394,9 +392,8 @@ const Privacy = () => (
         questions about how these requirements apply to you, please contact us at legal@oasis.app. By using the Site or
         Services, you confirm that you will not use the Site or
         Services to do any of the following:</p>
-      <p>
-      <ul>
 
+      <ul>
       <li>Unlawful Activity: Activity which would violate, or assist in violation of, any law, statute, ordinance, or
         regulation, sanctions programs administered in any relevant country, including but not limited to the U.S.
         Department of Treasury's Office of Foreign Assets Control (" OFAC "), or which would involve proceeds of any
@@ -444,7 +441,6 @@ const Privacy = () => (
           </ul>
         </li>
       </ul>
-    </p>
       <h2>13. General Information</h2>
 
       <h3>13.1 Entire Agreement</h3>
