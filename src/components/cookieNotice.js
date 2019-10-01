@@ -61,7 +61,7 @@ const CookieNotice = () => {
         <span style={{fontSize:"14px", color:"#231536", letterSpacing:"0.045em"}}>
           By using this website you agree to our{' '}
           <Link to="/privacy">
-            cookie policy
+            privacy policy
           </Link>
         </span>
         <div style={{width: "10px"}} />
