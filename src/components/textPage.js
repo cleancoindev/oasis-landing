@@ -28,6 +28,7 @@ const TextPage = styled.div`
   h3 {
     font-size: 21px;
     color: #000000;
+    margin: 28px 0;
   }
   
   p {
