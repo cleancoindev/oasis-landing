@@ -421,7 +421,7 @@ const IndexPage = () => (
           Trade
         </div>
         <div className="description" style={{ color: "#14303A" }}>
-          Wallet to wallet token trading. Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.
+          Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.
         </div>
         <div className="buttonContainer">
           <a
@@ -446,7 +446,7 @@ const IndexPage = () => (
           Borrow
         </div>
         <div className="description" style={{ color: "#5B2E1B" }}>
-          Lock your tokens in the Maker Vault to generate Dai, a decentralized cryptocurrency pegged to the value of 1 USD.
+          Lock your tokens as collateral in a CDP to generate Dai, a decentralized cryptocurrency pegged to 1 USD.
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#5D2D00", opacity: 0.6 }}>
@@ -464,7 +464,7 @@ const IndexPage = () => (
           Save
         </div>
         <div className="description" style={{ color: "#002F28" }}>
-          Start earning savings on your Dai by locking it into the Maker Vault. Automatic, non-custodial savings.
+          Earn savings on your Dai by locking it into Oasis Save. Automatic and non-custodial.
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#002F28", opacity: 0.6 }}>
@@ -486,23 +486,19 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "108px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens,
-        borrow Dai and earn savings — all in one place.
+        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings - all in one place.
       </p>
     </TextSection>
     <TextSection>
       <h3>Secure protocol built on Ethereum</h3>
       <p>
-        Oasis is built on top of formally verified smart contracts created by
-        The Maker Foundation, the industry leader in secure decentralized
-        finance.
+        Oasis is built on top of audited and formally verified smart contracts created by Maker, the industry leader in secure decentralized finance.
       </p>
     </TextSection>
     <TextSection>
       <h3>Completely Permissionless</h3>
       <p>
-        Anyone can access the system simply by using a wallet address, and you
-        never have to trust a counterparty institution to approve your activity.
+        Anyone can access the system simply by using an ethereum supported wallet. Oasis is a decentralized, non-custodial platform. We can never touch or control your assets.
       </p>
     </TextSection>
     <TextSection>
