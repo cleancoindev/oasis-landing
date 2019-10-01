@@ -1,42 +1,8 @@
 import React from "react"
 
-import styled from "styled-components"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const TextPage = styled.div`
-  max-width: 680px;
-  text-align: left;
-  margin: 0 auto;
-  padding: 75px 0 28px;
-  
-  h1 {
-    font-size: 38px;
-    color: #1E2E3A;
-    margin: 20px 0;
-  }
-  
-  .subheading {
-    font-size: 17px;
-    color: #666666;
-    margin-bottom: 49px;
-  }
-  
-  h2 {
-    font-size: 25px;
-    color: #000000;
-    margin: 35px 0;
-    line-height: 36px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 28px;
-    margin: 28px 0;
-  }
-`
-
+import TextPage from "../components/textPage"
 
 const Privacy = () => (
   <Layout>
