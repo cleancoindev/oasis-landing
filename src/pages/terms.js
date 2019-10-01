@@ -36,9 +36,12 @@ const TextPage = styled.div`
   }
   
   p {
+    margin: 28px 0;
+  }
+  
+  p, ul {
     font-size: 18px;
     line-height: 28px;
-    margin: 28px 0;
   }
   
   ul {
