@@ -313,7 +313,7 @@ const Questions = () => {
       q: "What is Dai?",
       a: (
         <span>
-          Dai is a stablecoin soft pegged to the US Dollar. It aims to be 1 Dai = $1 USD but this can vary slightly. Read more{" "}
+          Dai is a stablecoin soft pegged to the US Dollar. It aims to be 1 Dai = $1 USD, but this can vary slightly. Read more{" "}
           <a href="https://makerdao.com/dai/" target="_blank" rel="noopener noreferrer">
             here
           </a>
@@ -324,7 +324,7 @@ const Questions = () => {
     {
       q: "Do I need an account?",
       a:
-        "You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as Metamask, Coinbase Wallet, etc.",
+        <span>You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">Metamask</a>, <a href="https://wallet.coinbase.com/" target="_blank" rel="noopener noreferrer">Coinbase Wallet</a>, etc.</span>,
     },
     {
       q: "Why are Borrow and Save not yet available?",
@@ -351,7 +351,7 @@ const Questions = () => {
           Oasis does not charge any fees, although you will have to pay{" "}
           <a href="https://kb.myetherwallet.com/en/transactions/what-is-gas/" target="_blank" rel="noopener noreferrer">
             gas
-          </a>{" "}and other fees associated with the Maker Protocol.
+          </a>{" "}and other fees associated with the Maker Protocol, such as Stability Fees.
         </span>,
     },
     {
@@ -369,7 +369,7 @@ const Questions = () => {
     {
       q: "Can I buy Bitcoin or Ethereum with my bank account on Oasis?",
       a:
-        "You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai, to buy Ethereum and other supported tokens. ",
+        "You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai to buy Ethereum and other supported tokens. ",
     },
   ]
 
