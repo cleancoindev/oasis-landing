@@ -446,7 +446,7 @@ const IndexPage = () => (
           Borrow
         </div>
         <div className="description" style={{ color: "#5B2E1B" }}>
-          Lock your tokens as collateral in a CDP to generate Dai, a decentralized cryptocurrency pegged to 1 USD.
+          Lock your tokens as collateral to generate Dai, a decentralized cryptocurrency pegged to 1 USD.
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#5D2D00", opacity: 0.6 }}>
