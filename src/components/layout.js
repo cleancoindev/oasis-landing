@@ -41,6 +41,10 @@ const Footer = styled.footer`
       color: black;
     }
     
+    a:hover {
+      color: #6D6D6D;
+    }
+    
     a:not(:first-child) {
       margin-left: 64px;
     }

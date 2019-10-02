@@ -103,7 +103,7 @@ const TextSection = styled.div`
     max-width: 580px;
     margin: 0 auto;
     font-size: 20px;
-    line-height: 29px;
+    line-height: 30px;
   }
 `
 
