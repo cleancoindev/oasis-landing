@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Oasis`,
-    description: `Trade, borrow and save using Dai.`,
+    description: `Trade, borrow and save using Dai - The all in one Defi hub.`,
     author: `-`,
   },
   plugins: [

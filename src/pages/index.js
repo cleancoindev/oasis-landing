@@ -474,7 +474,7 @@ const IndexPage = () => (
       </Card>
     </Cards>
     <TextSection style={{ marginTop: "103px" }}>
-      <h3>Supported Tokens</h3>
+      <h3>Currently supported by Oasis Trade</h3>
       <TokenList>
         {tokens
           .filter(t => selectedTokens.includes(t.name))
