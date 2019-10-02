@@ -20,7 +20,7 @@ const CookieNoticeStyle = styled.div`
   padding: 8px 18px 10px;
   white-space: nowrap;
 
-  @media (max-width: 435px) {
+  @media (max-width: 415px) {
     bottom: 0;
     border-radius: unset;
     white-space: normal;
@@ -58,7 +58,7 @@ const CookieNotice = () => {
   return (
     <CookieNoticeStyle style={{ display: show ? 'block' : 'none' }}>
       <div style={{display: "flex", alignItems:"center"}}>
-        <span style={{fontSize:"14px", color:"#231536", letterSpacing:"0.045em"}}>
+        <span style={{fontSize:"14px", color:"#231536"}}>
           By using this website you agree to our{' '}
           <Link to="/privacy">
             privacy policy
