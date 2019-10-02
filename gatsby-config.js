@@ -24,6 +24,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
+        icon: `src/images/favicon/android-chrome-512x512.png` // gatsby generates the rest
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
