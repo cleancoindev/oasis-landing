@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/makerdao/oasis-landing.svg?token=ypax3WLsfk1Dj4t78DCV&branch=master)](https://travis-ci.com/makerdao/oasis-landing)
+
 # Oasis Landing
 
 Upcoming landing page for Oasis.
