@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import mixpanel from "mixpanel-browser"
 
 import BatIcon from "../images/tokens/bat.svg"
 import ZrxIcon from "../images/tokens/zrx.svg"
@@ -430,6 +430,12 @@ const IndexPage = () => (
             style={{
               color: "#5894B5",
               backgroundColor: "white",
+            }}
+            onClick={() => {
+              mixpanel.track('btn-click', {
+                id: 'StartTrading',
+                product: 'oasis-landing',
+              });
             }}
           >
             Start Trading
