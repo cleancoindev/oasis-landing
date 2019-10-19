@@ -492,7 +492,7 @@ const IndexPage = () => (
     <TextSection style={{ marginTop: "108px" }}>
       <h3>What's the Story</h3>
       <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings - all in one place.
+        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings — all in one place.
       </p>
     </TextSection>
     <TextSection>
