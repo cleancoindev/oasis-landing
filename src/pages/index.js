@@ -18,6 +18,13 @@ import UsdcIcon from "../images/tokens/usdc.svg"
 import WbtcIcon from "../images/tokens/wbtc.svg"
 import EmptyIcon from "../images/tokens/empty.svg"
 
+import messages from '../messages'
+import LocalizedStrings from 'react-localization';
+
+let lang = new LocalizedStrings({
+  en: messages
+});
+
 const Hero = styled.div`
   color: #1e2e3a;
   font-size: 38px;
@@ -303,73 +310,78 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
 const Questions = () => {
   const [selectedIndex, setSelectedIndex] = useState(null)
 
+  const link = (url, text) => (
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      {text}
+    </a>
+  );
+
   const questions = [
     {
-      q: "What is Oasis?",
-      a:
-        "Oasis is a decentralized application which runs on the Ethereum blockchain. Allowing anyone to trade tokens, borrow against them and earn savings using Dai.",
+      q: lang.landing_page.question1,
+      a: lang.landing_page.answer1
     },
     {
-      q: "What is Dai?",
-      a: (
-        <span>
-          Dai is a stablecoin soft pegged to the US Dollar. It aims to be 1 Dai = $1 USD, but this can vary slightly. Read more{" "}
-          <a href="https://makerdao.com/dai/" target="_blank" rel="noopener noreferrer">
-            here
-          </a>
-          .
-        </span>
-      ),
+      q: lang.landing_page.question2,
+      a: lang.formatString(
+        lang.landing_page.answer2,
+        link(
+          lang.landing_page.answer2_link1_url,
+          lang.landing_page.answer2_link1_text
+        )
+      )
     },
     {
-      q: "Do I need an account?",
-      a:
-        <span>You do not need an account to use Oasis. However, you will need an Ethereum wallet. Oasis supports most Ethereum browser wallets such as <a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">Metamask</a>, <a href="https://wallet.coinbase.com/" target="_blank" rel="noopener noreferrer">Coinbase Wallet</a>, etc.</span>,
+      q: lang.landing_page.question3,
+      a: lang.formatString(
+        lang.landing_page.answer3,
+        link(
+          lang.landing_page.answer3_link1_url,
+          lang.landing_page.answer3_link1_text
+        ),
+        link(
+          lang.landing_page.answer3_link2_url,
+          lang.landing_page.answer3_link2_text
+        )
+      )
     },
     {
-      q: "Why are Borrow and Save not yet available?",
-      a: (
-        <span>
-          Borrow and Save are features coming with the launch of
-          Multi-Collateral Dai. You can track{" "}
-          <a href="https://makerdao.com/roadmap/" target="_blank" rel="noopener noreferrer">
-            Multi-Collateral Dai progress here
-          </a>
-          .
-        </span>
-      ),
+      q: lang.landing_page.question4,
+      a: lang.formatString(
+        lang.landing_page.answer4,
+        link(
+          lang.landing_page.answer4_link1_url,
+          lang.landing_page.answer4_link1_text
+        )
+      )
     },
     {
-      q: "Is it secure?",
-      a:
-        "We conduct a range of audits on all of our smart contracts and the Oasis code is open-source.",
+      q: lang.landing_page.question5,
+      a: lang.formatString(
+        lang.landing_page.answer5,
+        link(
+          lang.landing_page.answer5_link1_url,
+          lang.landing_page.answer5_link1_text
+        )
+      )
     },
     {
-      q: "Are there fees?",
-      a:
-        <span>
-          Oasis does not charge any fees, although you will have to pay{" "}
-          <a href="https://kb.myetherwallet.com/en/transactions/what-is-gas/" target="_blank" rel="noopener noreferrer">
-            gas
-          </a>{" "}and other fees associated with the Maker Protocol, such as Stability Fees.
-        </span>,
+      q: lang.landing_page.question6,
+      a: lang.landing_page.answer6
     },
     {
-      q: "I have a question, how can I get in contact with you?",
-      a: (
-        <span>
-          You can reach the team by contacting us on{" "}
-          <a href="https://chat.makerdao.com" target="_blank" rel="noopener noreferrer">
-            our chat
-          </a>
-          .
-        </span>
-      ),
+      q: lang.landing_page.question7,
+      a: lang.formatString(
+        lang.landing_page.answer7,
+        link(
+          lang.landing_page.answer7_link1_url,
+          lang.landing_page.answer7_link1_text
+        )
+      )
     },
     {
-      q: "Can I buy Bitcoin or Ethereum with my bank account on Oasis?",
-      a:
-        "You cannot buy crypto from your bank account using Oasis. Instead, you can use Dai to buy Ethereum and other supported tokens. ",
+      q: lang.landing_page.question8,
+      a: lang.landing_page.answer8
     },
   ]
 
@@ -409,7 +421,7 @@ const Questions = () => {
 const IndexPage = () => (
   <Layout>
     <SEO title="Oasis" />
-    <Hero>Trade, borrow and save using Dai.</Hero>
+    <Hero>{lang.landing_page.headline}</Hero>
     <Cards>
       <Card
         style={{
@@ -418,10 +430,10 @@ const IndexPage = () => (
         }}
       >
         <div className="title" style={{ color: "#253A44" }}>
-          Trade
+          {lang.landing_page.trade_card.title}
         </div>
         <div className="description" style={{ color: "#14303A" }}>
-          Place orders in the Marketplace, or simply exchange your tokens instantly for what's available.
+          {lang.landing_page.trade_card.description}
         </div>
         <div className="buttonContainer">
           <a
@@ -438,7 +450,7 @@ const IndexPage = () => (
               });
             }}
           >
-            Start Trading
+            {lang.landing_page.trade_card.button}
           </a>
         </div>
       </Card>
@@ -449,10 +461,10 @@ const IndexPage = () => (
         }}
       >
         <div className="title" style={{ color: "#5B2E1B" }}>
-          Borrow
+          {lang.landing_page.borrow_card.title}
         </div>
         <div className="description" style={{ color: "#5B2E1B" }}>
-          Lock your tokens as collateral to generate Dai, a decentralized cryptocurrency pegged to 1 USD.
+          {lang.landing_page.borrow_card.description}
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#5D2D00", opacity: 0.6 }}>
@@ -467,10 +479,10 @@ const IndexPage = () => (
         }}
       >
         <div className="title" style={{ color: "#002F28" }}>
-          Save
+          {lang.landing_page.save_card.title}
         </div>
         <div className="description" style={{ color: "#002F28" }}>
-          Earn savings on your Dai by locking it into Oasis Save. Automatic and non-custodial.
+          {lang.landing_page.save_card.description}
         </div>
         <div className="buttonContainer">
           <div className="button" style={{ color: "#002F28", opacity: 0.6 }}>
@@ -480,7 +492,7 @@ const IndexPage = () => (
       </Card>
     </Cards>
     <TextSection style={{ marginTop: "103px" }}>
-      <h3>Currently supported by Oasis Trade</h3>
+      <h3>{lang.landing_page.token_section_title}</h3>
       <TokenList>
         {tokens
           .filter(t => selectedTokens.includes(t.name))
@@ -490,25 +502,19 @@ const IndexPage = () => (
       </TokenList>
     </TextSection>
     <TextSection style={{ marginTop: "108px" }}>
-      <h3>What's the Story</h3>
-      <p>
-        Oasis is a platform for decentralized finance. Use it to trade tokens, borrow Dai and earn savings — all in one place.
-      </p>
+      <h3>{lang.landing_page.section1_title}</h3>
+      <p>{lang.landing_page.section1_p}</p>
     </TextSection>
     <TextSection>
-      <h3>Secure protocol built on Ethereum</h3>
-      <p>
-        Oasis is built on top of audited and formally verified smart contracts created by Maker, the industry leader in secure decentralized finance.
-      </p>
+      <h3>{lang.landing_page.section2_title}</h3>
+      <p>{lang.landing_page.section2_p}</p>
     </TextSection>
     <TextSection>
-      <h3>Completely Permissionless</h3>
-      <p>
-        Anyone can access the system simply by using an ethereum supported wallet. Oasis is a decentralized, non-custodial platform. We can never touch or control your assets.
-      </p>
+      <h3>{lang.landing_page.section3_title}</h3>
+      <p>{lang.landing_page.section3_p}</p>
     </TextSection>
     <TextSection>
-      <h3>Questions</h3>
+      <h3>{lang.landing_page.questions_title}</h3>
       <Questions />
     </TextSection>
   </Layout>
